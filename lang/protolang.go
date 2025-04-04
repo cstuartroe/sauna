@@ -53,8 +53,16 @@ func surfaceProtoVowel(frontness VowelFrontness, atr bool) Vowel {
 	return Vowel{height, frontness}
 }
 
+func IsAtr(v Vowel) bool {
+	return surfaceProtoVowel(v.Frontness, true) == v
+}
+
 func surfaceProtoCoda(moa MannerOfArticulation) Consonant {
 	return Consonant{Coronal, moa}
+}
+
+func IsValidCoda(c Consonant) bool {
+	return surfaceProtoCoda(c.MOA) == c
 }
 
 func lenite(syll ProtoSyllable, onset Consonant) (MannerOfArticulation, Consonant) {

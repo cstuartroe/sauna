@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/cstuartroe/sauna/dictionary"
 	"github.com/cstuartroe/sauna/lang"
 )
 
@@ -13,7 +14,7 @@ func getSuffix(name string) (lang.ProtoSuffix, error) {
 			return suffix, nil
 		}
 	}
-	return lang.ProtoSuffix{}, fmt.Errorf("Failed to find suffix %q", name)
+	return lang.ProtoSuffix{}, fmt.Errorf("failed to find suffix %q", name)
 }
 
 func ParseGloss(gloss string) ([]lang.NewWord, error) {
@@ -24,9 +25,9 @@ func ParseGloss(gloss string) ([]lang.NewWord, error) {
 	for _, wordString := range wordStrings {
 		morphemeStrings := strings.Split(wordString, "-")
 
-		word, ok := lang.Dictionary[morphemeStrings[0]]
+		word, ok := dictionary.Dictionary[morphemeStrings[0]]
 		if !ok {
-			return nil, fmt.Errorf("Failed to find root %q", morphemeStrings[0])
+			return nil, fmt.Errorf("failed to find root %q", morphemeStrings[0])
 		}
 
 		for i := 1; i < len(morphemeStrings); i++ {

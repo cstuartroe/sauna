@@ -70,7 +70,7 @@ func generateParagraph() {
 }
 
 func main() {
-	words, err := gloss.ParseGloss("eat-cnt-gen-par")
+	words, err := gloss.ParseGloss("birch-par eat-pst-s1s")
 	if err != nil {
 		fmt.Printf("%v\n", err)
 		return
