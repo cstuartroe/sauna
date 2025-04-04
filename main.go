@@ -2,6 +2,10 @@ package main
 
 import (
 	"fmt"
+	"maps"
+	"os"
+	"slices"
+	"strings"
 
 	"github.com/cstuartroe/sauna/gloss"
 	"github.com/cstuartroe/sauna/lang"
@@ -69,12 +73,34 @@ func generateParagraph() {
 	fmt.Println()
 }
 
-func main() {
-	words, err := gloss.ParseGloss("birch-par eat-pst-s1s")
+func cliGloss() {
+	words, err := gloss.ParseGloss(os.Args[2])
 	if err != nil {
 		fmt.Printf("%v\n", err)
 		return
 	}
 
 	fmt.Println(gloss.Text(words))
+}
+
+var commands = map[string]func(){
+	"paragraph":     generateParagraph,
+	"test_suffixes": testSuffixes,
+	"real_suffixes": testActualSuffixes,
+	"gloss":         cliGloss,
+}
+
+func main() {
+	if len(os.Args) < 2 {
+		fmt.Printf("Please pass a command. Available commands: %v\n", strings.Join(slices.Collect(maps.Keys(commands)), ", "))
+		return
+	}
+
+	commandName := os.Args[1]
+
+	if cmd, ok := commands[commandName]; ok {
+		cmd()
+	} else {
+		fmt.Printf("Unknown command %q\n", commandName)
+	}
 }
