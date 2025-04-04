@@ -23,7 +23,9 @@ func NewProtoWord(atr bool, syllables []ProtoSyllable) (ProtoWord, error) {
 
 	for i, syllable := range syllables {
 		if syllable.Onset == NG {
-			err = fmt.Errorf("ng is not a valid onset for proto words")
+			if i == 0 || syllables[i-1].Coda != Nasal {
+				err = fmt.Errorf("ng is not a valid onset for proto words, except after N")
+			}
 		} else if syllable.Onset == H {
 			err = fmt.Errorf("h is not a valid onset for proto words")
 		} else if syllable.Coda == Approximant {
@@ -55,8 +57,8 @@ func surfaceProtoCoda(moa MannerOfArticulation) Consonant {
 	return Consonant{Coronal, moa}
 }
 
-func lenite(frontness VowelFrontness, coda MannerOfArticulation, onset Consonant) (MannerOfArticulation, Consonant) {
-	switch coda {
+func lenite(syll ProtoSyllable, onset Consonant) (MannerOfArticulation, Consonant) {
+	switch syll.Coda {
 	case 0:
 		switch onset {
 		case P:
@@ -64,6 +66,11 @@ func lenite(frontness VowelFrontness, coda MannerOfArticulation, onset Consonant
 		case T:
 			return 0, R
 		case K:
+			frontness := syll.Nucleus
+			if syll.Offglide != 0 {
+				frontness = syll.Offglide
+			}
+
 			if frontness == Back {
 				return 0, V
 			} else {
@@ -90,7 +97,7 @@ func lenite(frontness VowelFrontness, coda MannerOfArticulation, onset Consonant
 		}
 	}
 
-	return coda, onset
+	return syll.Coda, onset
 }
 
 func (w ProtoWord) Romanization() string {

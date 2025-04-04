@@ -73,6 +73,13 @@ func RandomProtoWord() (ProtoWord, error) {
 
 		syllables = append(syllables, syllable)
 	}
+
+	if len(syllables) >= 2 {
+		if rand.Float64() > .5 {
+			syllables[0].Coda, syllables[1].Onset = lenite(syllables[0], syllables[1].Onset)
+		}
+	}
+
 	return NewProtoWord(
 		WeightedRandomElement(atrWeights),
 		syllables,

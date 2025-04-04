@@ -30,20 +30,7 @@ func testSuffixes() {
 	}
 }
 
-type namedSuffix struct {
-	name   string
-	suffix lang.ProtoSuffix
-}
-
 func testActualSuffixes() {
-	suffixes := []namedSuffix{}
-	for name, suffix := range lang.NumberSuffixes {
-		suffixes = append(suffixes, namedSuffix{name, suffix})
-	}
-	for name, suffix := range lang.CaseSuffixes {
-		suffixes = append(suffixes, namedSuffix{name, suffix})
-	}
-
 	for i := 0; i < 50; i++ {
 		pw, err := lang.RandomProtoWord()
 		if err != nil {
@@ -52,10 +39,13 @@ func testActualSuffixes() {
 		}
 		printEvolution(pw)
 
-		for _, ns := range suffixes {
-			withSuffix := lang.ApplySuffix(pw, ns.suffix)
-			nw := lang.Evolve(withSuffix)
-			fmt.Printf("%s + %s -> %s\n", withSuffix.Romanization(), ns.name, nw.Romanization())
+		for _, suffixSet := range lang.SuffixSets {
+			fmt.Println()
+			for name, suffix := range suffixSet {
+				withSuffix := lang.ApplySuffix(pw, suffix)
+				nw := lang.Evolve(withSuffix)
+				fmt.Printf("    %s: %s -> %s\n", name, withSuffix.Romanization(), nw.Romanization())
+			}
 		}
 
 		fmt.Println()

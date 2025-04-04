@@ -1,9 +1,10 @@
 package lang
 
 type ProtoSuffix struct {
-	lenite      bool
-	leadingCoda MannerOfArticulation
-	syllables   []ProtoSyllable
+	lenite        bool
+	leadingCoda   MannerOfArticulation
+	syllables     []ProtoSyllable
+	syllablesFunc func(ProtoWord) []ProtoSyllable
 }
 
 var epentheticVowel VowelFrontness = Front
@@ -13,13 +14,17 @@ func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
 	newSyllables = append(newSyllables, word.syllables...)
 	lenitionIndex := -1
 
-	lastSyllable := newSyllables[len(newSyllables)-1]
+	lastSyllable := &newSyllables[len(newSyllables)-1]
+	suffixSyllables := suffix.syllables
+	if suffix.syllablesFunc != nil {
+		suffixSyllables = suffix.syllablesFunc(word)
+	}
 
-	if len(suffix.syllables) == 0 {
-		lenitionIndex = len(newSyllables) - 1
-	} else if lastSyllable.Coda != 0 {
+	suffixStartsWithVowel := len(suffixSyllables) > 0 && suffixSyllables[0].Onset == Consonant{}
+
+	if lastSyllable.Coda != 0 {
 		if suffix.leadingCoda != 0 {
-			newSyllables[len(newSyllables)-1].Coda = 0
+			lastSyllable.Coda = 0
 			lenitionIndex = len(newSyllables)
 
 			syll := ProtoSyllable{
@@ -28,29 +33,29 @@ func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
 				Coda:    suffix.leadingCoda,
 			}
 			newSyllables = append(newSyllables, syll)
-			newSyllables = append(newSyllables, suffix.syllables...)
-		} else if (suffix.syllables[0].Onset == Consonant{}) {
-			newSyllables[len(newSyllables)-1].Coda = 0
+			newSyllables = append(newSyllables, suffixSyllables...)
+		} else if suffixStartsWithVowel {
+			lastSyllable.Coda = 0
 			lenitionIndex = len(newSyllables)
 
 			syllsToAdd := []ProtoSyllable{}
-			syllsToAdd = append(syllsToAdd, suffix.syllables...)
+			syllsToAdd = append(syllsToAdd, suffixSyllables...)
 			syllsToAdd[0].Onset = surfaceProtoCoda(word.syllables[len(word.syllables)-1].Coda)
 			newSyllables = append(newSyllables, syllsToAdd...)
 		} else {
-			newSyllables = append(newSyllables, suffix.syllables...)
+			newSyllables = append(newSyllables, suffixSyllables...)
 		}
 	} else {
 		lenitionIndex = len(newSyllables) - 1
 
 		if suffix.leadingCoda != 0 {
-			newSyllables[len(newSyllables)-1].Coda = suffix.leadingCoda
-			newSyllables = append(newSyllables, suffix.syllables...)
-		} else if (suffix.syllables[0].Onset == Consonant{}) {
-			if lastSyllable.Offglide == 0 && suffix.syllables[0].Offglide == 0 {
-				newSyllables[len(newSyllables)-1].Offglide = suffix.syllables[0].Nucleus
-				newSyllables[len(newSyllables)-1].Coda = suffix.syllables[0].Coda
-				newSyllables = append(newSyllables, suffix.syllables[1:]...)
+			lastSyllable.Coda = suffix.leadingCoda
+			newSyllables = append(newSyllables, suffixSyllables...)
+		} else if suffixStartsWithVowel {
+			if lastSyllable.Offglide == 0 && suffixSyllables[0].Offglide == 0 {
+				lastSyllable.Offglide = suffixSyllables[0].Nucleus
+				lastSyllable.Coda = suffixSyllables[0].Coda
+				newSyllables = append(newSyllables, suffixSyllables[1:]...)
 			} else {
 				lastVowel := lastSyllable.Nucleus
 				if lastSyllable.Offglide != 0 {
@@ -60,23 +65,19 @@ func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
 				if lastVowel == Back {
 					epentheticConsonant = V
 				}
-				newSyllables = append(newSyllables, suffix.syllables...)
+				newSyllables = append(newSyllables, suffixSyllables...)
 				newSyllables[lenitionIndex+1].Onset = epentheticConsonant
 			}
 		} else {
-			newSyllables = append(newSyllables, suffix.syllables...)
+			newSyllables = append(newSyllables, suffixSyllables...)
 		}
 	}
 
 	if suffix.lenite && lenitionIndex != -1 {
 		if lenitionIndex == 0 {
-			_, newSyllables[lenitionIndex].Onset = lenite(0, 0, newSyllables[lenitionIndex].Onset)
+			// _, newSyllables[lenitionIndex].Onset = lenite(ProtoSyllable{}, newSyllables[lenitionIndex].Onset)
 		} else {
-			vowelFrontness := newSyllables[lenitionIndex-1].Nucleus
-			if newSyllables[lenitionIndex-1].Offglide != 0 {
-				vowelFrontness = newSyllables[lenitionIndex-1].Offglide
-			}
-			newSyllables[lenitionIndex-1].Coda, newSyllables[lenitionIndex].Onset = lenite(vowelFrontness, newSyllables[lenitionIndex-1].Coda, newSyllables[lenitionIndex].Onset)
+			newSyllables[lenitionIndex-1].Coda, newSyllables[lenitionIndex].Onset = lenite(newSyllables[lenitionIndex-1], newSyllables[lenitionIndex].Onset)
 		}
 	}
 
@@ -194,6 +195,7 @@ var CaseSuffixes = map[string]ProtoSuffix{
 	},
 	"nom": {},
 	"ben": {
+		leadingCoda: Nasal,
 		syllables: []ProtoSyllable{
 			{
 				Onset:   Y,
@@ -247,4 +249,70 @@ var CaseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
+}
+
+var VoiceSuffixes = map[string]ProtoSuffix{
+	"psv": {
+		syllables: []ProtoSyllable{
+			{
+				Onset:   R,
+				Nucleus: Central,
+			},
+		},
+	},
+	"cau": {
+		syllables: []ProtoSyllable{
+			{
+				Onset:   S,
+				Nucleus: Central,
+			},
+		},
+	},
+}
+
+var TenseSuffixes = map[string]ProtoSuffix{
+	"prs": {
+		syllables: []ProtoSyllable{
+			{
+				Onset:   R,
+				Nucleus: Back,
+			},
+		},
+	},
+	"pst": {
+		leadingCoda: Fricative,
+	},
+	"cnt": {
+		syllables: []ProtoSyllable{
+			{
+				Onset:   T,
+				Nucleus: Front,
+			},
+		},
+	},
+}
+
+var SubjectSuffixes = map[string]ProtoSuffix{
+	"s1s": {
+		leadingCoda: Nasal,
+	},
+	"spl": {
+		syllablesFunc: func(pw ProtoWord) []ProtoSyllable {
+			lastSyllable := pw.syllables[len(pw.syllables)-1]
+			var suffixSyllables = []ProtoSyllable{}
+			if lastSyllable.Offglide == 0 && lastSyllable.Coda == 0 {
+				// will lengthen final vowel
+				suffixSyllables = append(suffixSyllables, ProtoSyllable{Nucleus: lastSyllable.Nucleus})
+			}
+			return suffixSyllables
+		},
+	},
+}
+
+var SuffixSets = []map[string]ProtoSuffix{
+	NumberSuffixes,
+	CaseSuffixes,
+	VoiceSuffixes,
+	TenseSuffixes,
+	SubjectSuffixes,
 }
