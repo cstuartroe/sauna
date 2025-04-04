@@ -194,6 +194,9 @@ var CaseSuffixes = map[string]ProtoSuffix{
 		},
 	},
 	"nom": {},
+	"par": {
+		leadingCoda: Stop,
+	},
 	"ben": {
 		leadingCoda: Nasal,
 		syllables: []ProtoSyllable{

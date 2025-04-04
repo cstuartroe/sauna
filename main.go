@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/cstuartroe/sauna/gloss"
 	"github.com/cstuartroe/sauna/lang"
 )
 
@@ -69,5 +70,11 @@ func generateParagraph() {
 }
 
 func main() {
-	testActualSuffixes()
+	words, err := gloss.ParseGloss("eat-cnt-gen-par")
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+
+	fmt.Println(gloss.Text(words))
 }
