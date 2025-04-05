@@ -35,7 +35,7 @@ var protoMedialConsonantWeights = UniformDropoff([]Consonant{K, T, N, V, S, R /*
 var protoNucleusWeights = UniformDropoff([]VowelFrontness{Central, Front, Back}, .6)
 var protoOffglideWeights = map[VowelFrontness]float64{0: 20, Front: 1, Central: .75, Back: 1}
 var protoCodaWeights = map[MannerOfArticulation]float64{0: 15, Nasal: 2, Stop: 1, Fricative: .75}
-var protoSyllableLengthWeights = map[int]float64{1: 2, 2: 10, 3: 3, 4: 1}
+var protoSyllableLengthWeights = map[int]float64{1: 2, 2: 5, 3: 1}
 var atrWeights = map[bool]float64{true: 1, false: 1}
 
 func validProtoInitialConsonant(syllable ProtoSyllable) bool {

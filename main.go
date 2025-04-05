@@ -84,11 +84,22 @@ func cliGloss() {
 	fmt.Println(gloss.Text(words))
 }
 
+func generateWords() {
+	for i := 0; i < 3; i++ {
+		word, err := lang.RandomProtoWord()
+		if err != nil {
+			panic(err)
+		}
+		printEvolution(word)
+	}
+}
+
 var commands = map[string]func(){
 	"paragraph":     generateParagraph,
 	"test_suffixes": testSuffixes,
 	"real_suffixes": testActualSuffixes,
 	"gloss":         cliGloss,
+	"generate":      generateWords,
 	"docs":          gendocs.GenerateDocs,
 }
 
