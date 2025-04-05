@@ -39,9 +39,6 @@ func Evolve(protoword ProtoWord) NewWord {
 			if newsyllable.Onset == V {
 				newsyllable.Onset = M
 			}
-			if newsyllable.Onset == R {
-				prevSyll.Coda = R
-			}
 		case T, S:
 			if newsyllable.Onset.MOA == Nasal || newsyllable.Onset == R {
 				prevSyll.Coda = R
