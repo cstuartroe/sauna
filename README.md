@@ -223,13 +223,13 @@ home-ALL-TOP woman-NOM go-PST-S2/3S
 For some constructions, a particular argument must be the topic.
 
 ```
-eyokateva     ereku    narou     
-magpie-PL-TOP tail-NOM be-NPT-SP 
+eyokateva     ereku    naro         
+magpie-PL-TOP tail-NOM be-NPT-S2/3S 
 "Magpies have tails."
 ```
 
 ```
-arava         eyokate       tairou      
+aremma        eyokate       tairou      
 1S.polite-TOP magpie-PL-NOM good-NPT-SP 
 "I like magpies."
 ```
@@ -458,7 +458,7 @@ This is preferred over putting first person pronouns in the adpositional cases, 
 using a pronoun if there is no risk of ambiguity, but may not be used with an actual noun possessor.
 
 ```
-*so       araane        okote    
+*so       arenane       okote    
  that-NOM 1S.polite-ALL give-CNJ 
 "Give it to me."
 ```
@@ -558,7 +558,7 @@ magpie-NOM see-PSV-S2/3S
 However, in the potential sense, an agent may be stated; if so, it is the topic, and the verb is still conjugated for the patient.
 
 ```
-arava         eyokat     uhere         
+aremma        eyokat     uhere         
 1S.polite-TOP magpie-NOM see-PSV-S2/3S 
 "I can see the magpie."
 ```
@@ -666,7 +666,7 @@ Verbs can be turned into nouns, which can either refer to a single instance of p
 by adding the conjunctive suffix and the genitive case suffix. Other case suffixes then stack on top of the genitive suffix.
 
 ```
-arava         etarea          tairo          
+aremma        etarea          tairo          
 1S.polite-TOP eat-CNJ-GEN-NOM good-NPT-S2/3S 
 "I like eating."
 ```
@@ -677,5 +677,375 @@ Arguments of the nominalized verb can branch leftward from the verb:
 nappat    veteanyo         senguoni  yatosen    
 stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S 
 "I went to the river to get stones."
+```
+
+## Numerals
+
+### Counting system
+
+Sauna's numerals are largely base ten, with multiples of ten up to one hundred grouped into twenties.
+
+*u* "one"
+
+*iri* "two"
+
+*sone* "three"
+
+*neye* "four"
+
+*tuise* "five"
+
+*tite* "six"
+
+*viki* "seven"
+
+*kiki* "eight"
+
+*une* "nine"
+
+*hesko* "ten"
+
+*hesko u* "eleven"
+
+*hesko iri* "twelve"
+
+*take* "twenty"
+
+*take hesko* "thirty"
+
+*iri take* "forty"
+
+*iri take hesko* "fifty"
+
+*teisis* "hundred"
+
+*ot* "thousand"
+
+*kairau* "ten thousand"
+
+*sone kairau tite ot tuise teisis neye take hesko kiki* "36,598"
+
+### Cardinal numbers and numeral classifiers
+
+Sauna uses numeral classifiers with cardinal numbers:
+
+```
+eyokatet   sone  tiri      
+magpie-PAR three CL.animal 
+"three magpies"
+```
+
+The classifiers are effectively nouns. They take the case marking for the phrase:
+
+```
+eyokatet   sone  tirinyu       
+magpie-PAR three CL.animal-DAT 
+"for three magpies"
+```
+
+Some nouns can even double as numeral classifiers:
+
+```
+kiitet  sone  te         
+cup-PAR three CL.general 
+"three cups"
+```
+
+```
+vetat     sone  kiite 
+water-PAR three cup   
+"three cups of water"
+```
+
+Some common classifiers include:
+
+- *te* can be used for any inanimate noun
+
+- *na* people, or anthropomorphized characters or deities
+
+- *tiri* birds and small to medium-sized mammals
+
+- *kui* small hard objects such as acorns, grains, beads, coins
+
+- *hise* pieces of a larger whole
+
+### Ordinal numbers
+
+To make numbers ordinal, they should appear as a modifier of the noun in the genitive:
+
+```
+sonea     eyokat 
+three-GEN magpie 
+"the third magpie"
+```
+
+"First" is irregular, being based on the word *ensoi* "beginning":
+
+```
+ensoiya       eyokat 
+beginning-GEN magpie 
+"the first magpie"
+```
+
+## Pronouns
+
+### Personal pronouns
+
+There is a range of options for singular address, based on politeness and gender. Plural pronouns are more standard.
+
+#### First person singular
+
+First person pronouns are the most likely to be omitted, since verbs unambiguously conjugate for them as subject,
+and the first person may be obvious from context in requests etc.
+
+If an explicit first person pronoun is given, there are three main choices:
+
+- *aren* is the standard first person pronoun, used in formal and some casual situations
+
+- *oura* is used by masculine people in most casual situations
+
+- *saye* sounds diminutive and may be used by feminine people casually, though it's not unusual for feminine people to use *aren* in some casual situations or even avoid *saye* consistently
+
+#### Second person singular
+
+It's common for names or nicknames to be used instead of second person pronouns. Second person pronouns are used in the following situations:
+
+- *si* is used when the other person's name is not known, such as when addressing a stranger or in writing or media addressing a generic reader/listener
+
+- *akara* is used to address someone of significantly higher status
+
+- *varaa* may be used by a masculine speaker to a masculine listener, sounding somewhat rough or uncouth
+
+#### Third person singular
+
+It's almost universal to use names when talking about single other people.
+The only exception is when talking about someone whose name is not known, in which case
+*so na* or *no na* "that person" can be used.
+
+#### Plural pronouns
+
+Plural pronouns are standard and always used rather than names or some other manner of description.
+
+*nai* is the exclusive first person plural pronoun ("we" excluding the listener).
+
+*kii* is the inclusive equivalent ("we" including the listener).
+
+*ti* is the second person plural pronoun.
+
+*ni* is the third person plural pronoun.
+
+### Demonstrative pronouns
+
+Sauna has three levels of distance for demonstratives:
+
+- *ko* is proximal ("this")
+
+- *so* is medial ("that by you, that nearby")
+
+- *no* is distal ("that over there, yon")
+
+There is also an indefinite pronoun *to* which by itself means "some, any" and is also used to form negative existentials and questions.
+
+Demonstrative pronouns have similar syntax to numerals. They can appear by themselves:
+
+```
+so       vetesen      
+that-NOM take-PST-S1S 
+"I took it."
+```
+
+or directly with classifiers:
+
+```
+so   te             vetesen      
+that CL.general-NOM take-PST-S1S 
+"I took that thing."
+```
+
+```
+no  naa          uhesin      
+yon CL.human-GEN see-PST-S1S 
+"I saw that person."
+```
+
+To be attributive, demonstratives are marked with the genitive:
+
+```
+noa     eyokara    uhesin      
+yon-GEN magpie-GEN see-PST-S1S 
+"I saw that magpie."
+```
+
+Demonstratives by themselves can mean "here" and "there" using the adpositional cases:
+
+```
+noane   yatoron    
+yon-ALL go-NPT-S1S 
+"I'm going there."
+```
+
+```
+tiurun       koatte   naro         
+home-P1S-NOM this-LOC be-NPT-S2/3S 
+"My house is here."
+```
+
+To retain the sense of a location, they must use the locative case as a topic, even though locations otherwise can be topic without overt locative marking:
+
+```
+tiuruve  kuni      naro         
+home-TOP woman-NOM be-NPT-S2/3S 
+"There's a woman in the house."
+```
+
+```
+noatteva    kuni      naro         
+yon-LOC-TOP woman-NOM be-NPT-S2/3S 
+"There's a woman over there."
+```
+
+```
+*nova    kuni      naro         
+ yon-TOP woman-NOM be-NPT-S2/3S 
+"There's a woman over there."
+```
+
+## Syntax
+
+### General word order
+
+The order of a Sauna clause is generally topic, subject (if it is distinct), oblique phrases, direct object, verb.
+However, case marking makes this somewhat flexible; the only rigid rule is that the verb must come last.
+
+```
+kohava    kuni      eyokarane  orat      okos           
+today-TOP woman-NOM magpie-ALL acorn-PAR give-PST-S2/3S 
+"Today the woman gave the magpie acorns."
+```
+
+If there are multiple predicates due to the use of the conjunctive verb form, their obliques and direct object are ordered
+the same way before each respective verb:
+
+```
+veta      neteti    tiuru    tatasen       
+water-NOM drink-CNJ home-NOM build-PST-S1S 
+"I drank water as I built the house."
+```
+
+### Existentials, to have, to be
+
+The verb *na* essentially means "to exist".
+
+```
+noatteva    eyokat     naro         
+yon-LOC-TOP magpie-NOM be-NPT-S2/3S 
+"There's a magpie over there."
+```
+
+With a topic, it can be used to mean "have":
+
+```
+aremma        tiuru    naro         
+1S.polite-TOP home-NOM be-NPT-S2/3S 
+"I have a house."
+```
+
+To equate two nouns, the equative case is used:
+
+```
+kunissi   naron      
+woman-EQU be-NPT-S1S 
+"I am a woman."
+```
+
+```
+so       tiurussi naro         
+that-NOM home-EQU be-NPT-S2/3S 
+"It is a house."
+```
+
+### Questions
+
+Sauna uses an interrogative suffix *-kU* which attaches to some element of the sentence to form a question, going after all other suffixes.
+
+For polar questions, this is generally the verb:
+
+```
+noane   yatosko          
+yon-ALL go-PST-S2/3S-INT 
+"Did you go there?"
+```
+
+although the interrogative particle can go on another element to specifically make it the contrastive focus of the question:
+
+```
+noaneko     yatos        
+yon-ALL-INT go-PST-S2/3S 
+"Is that where you went?"
+```
+
+For content questions, the interrogative particle is placed onto a noun phrase with the indefinite demonstrative.
+
+```
+toaneko      yatos        
+some-ALL-INT go-PST-S2/3S 
+"Where did you go?"
+```
+
+```
+toko         etas          
+some-NOM-INT eat-PST-S2/3S 
+"What did you eat?"
+```
+
+```
+sive          toa      kiiteku     tairo          
+2S.formal-TOP some-GEN cup-NOM-INT good-NPT-S2/3S 
+"Which cup do you like?"
+```
+
+Combining the indefinite with classifiers is a productive way to more specifically ask "what", "which", or "who"?
+
+```
+sive          to   naako            tairo          
+2S.formal-TOP some CL.human-GEN-INT good-NPT-S2/3S 
+"Who do you like?"
+```
+
+### Imperatives and cohortatives
+
+Sauna imperatives are formed by using the bare verb stem:
+
+```
+nin     oko  
+ALL-P1S give 
+"Give it to me."
+```
+
+This can sound rather blunt. There is a verb *ketaikoa* which is specifically used act as a softer imperative,
+with the actual verb being requested coming before in conjunctive form:
+
+```
+nin     okote    ketaikoa  
+ALL-P1S give-CNJ do.please 
+"Please give it to me."
+```
+
+This can actually be overly formal and polite. The most neutral way to pose a request, neither blunt and urgent nor overly formal,
+is to omit *ketaikoa* and leave the bare conjunctive.
+
+```
+nin     okote    
+ALL-P1S give-CNJ 
+"Give it to me."
+```
+
+The normal way to express a cohortative is with the non-past tense, plural conjugation plus interrogative particle.
+Note that this literally just asks about a group, but the implication can be cohortative if it makes sense contextually:
+
+```
+yatorouko     
+go-NPT-SP-INT 
+"Are they going?/Are we going?/Let's go!"
 ```
 

@@ -269,7 +269,7 @@ For roles other than agent, patient, location, or possessor, the topical case su
 
 For some constructions, a particular argument must be the topic.
 
-` + glossedSentence("magpie-PL-TOP tail-NOM be-NPT-SP", "Magpies have tails.") + `
+` + glossedSentence("magpie-PL-TOP tail-NOM be-NPT-S2/3S", "Magpies have tails.") + `
 
 ` + glossedSentence("1S.polite-TOP magpie-PL-NOM good-NPT-SP", "I like magpies.") + `
 
@@ -521,6 +521,252 @@ by adding the conjunctive suffix and the genitive case suffix. Other case suffix
 Arguments of the nominalized verb can branch leftward from the verb:
 
 ` + glossedSentence("stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S", "I went to the river to get stones.") + `
+
+## Numerals
+
+### Counting system
+
+Sauna's numerals are largely base ten, with multiples of ten up to one hundred grouped into twenties.
+
+*` + gl("one") + `* "one"
+
+*` + gl("two") + `* "two"
+
+*` + gl("three") + `* "three"
+
+*` + gl("four") + `* "four"
+
+*` + gl("five") + `* "five"
+
+*` + gl("six") + `* "six"
+
+*` + gl("seven") + `* "seven"
+
+*` + gl("eight") + `* "eight"
+
+*` + gl("nine") + `* "nine"
+
+*` + gl("ten") + `* "ten"
+
+*` + gl("ten one") + `* "eleven"
+
+*` + gl("ten two") + `* "twelve"
+
+*` + gl("twenty") + `* "twenty"
+
+*` + gl("twenty ten") + `* "thirty"
+
+*` + gl("two twenty") + `* "forty"
+
+*` + gl("two twenty ten") + `* "fifty"
+
+*` + gl("hundred") + `* "hundred"
+
+*` + gl("thousand") + `* "thousand"
+
+*` + gl("myriad") + `* "ten thousand"
+
+*` + gl("three myriad six thousand five hundred four twenty ten eight") + `* "36,598"
+
+### Cardinal numbers and numeral classifiers
+
+Sauna uses numeral classifiers with cardinal numbers:
+
+` + glossedSentence("magpie-PAR three CL.animal", "three magpies") + `
+
+The classifiers are effectively nouns. They take the case marking for the phrase:
+
+` + glossedSentence("magpie-PAR three CL.animal-DAT", "for three magpies") + `
+
+Some nouns can even double as numeral classifiers:
+
+` + glossedSentence("cup-PAR three CL.general", "three cups") + `
+
+` + glossedSentence("water-PAR three cup", "three cups of water") + `
+
+Some common classifiers include:
+
+- *` + gl("CL.general") + `* can be used for any inanimate noun
+
+- *` + gl("CL.human") + `* people, or anthropomorphized characters or deities
+
+- *` + gl("CL.animal") + `* birds and small to medium-sized mammals
+
+- *` + gl("CL.small.object") + `* small hard objects such as acorns, grains, beads, coins
+
+- *` + gl("CL.piece") + `* pieces of a larger whole
+
+### Ordinal numbers
+
+To make numbers ordinal, they should appear as a modifier of the noun in the genitive:
+
+` + glossedSentence("three-GEN magpie", "the third magpie") + `
+
+"First" is irregular, being based on the word *` + gl("beginning") + `* "beginning":
+
+` + glossedSentence("beginning-GEN magpie", "the first magpie") + `
+
+## Pronouns
+
+### Personal pronouns
+
+There is a range of options for singular address, based on politeness and gender. Plural pronouns are more standard.
+
+#### First person singular
+
+First person pronouns are the most likely to be omitted, since verbs unambiguously conjugate for them as subject,
+and the first person may be obvious from context in requests etc.
+
+If an explicit first person pronoun is given, there are three main choices:
+
+- *` + gl("1S.polite") + `* is the standard first person pronoun, used in formal and some casual situations
+
+- *` + gl("1S.masc") + `* is used by masculine people in most casual situations
+
+- *` + gl("1S.fem") + `* sounds diminutive and may be used by feminine people casually, though it's not unusual for feminine people to use *` + gl("1S.polite") + `* in some casual situations or even avoid *` + gl("1S.fem") + `* consistently
+
+#### Second person singular
+
+It's common for names or nicknames to be used instead of second person pronouns. Second person pronouns are used in the following situations:
+
+- *` + gl("2S.formal") + `* is used when the other person's name is not known, such as when addressing a stranger or in writing or media addressing a generic reader/listener
+
+- *` + gl("2S.hon") + `* is used to address someone of significantly higher status
+
+- *` + gl("2S.masc") + `* may be used by a masculine speaker to a masculine listener, sounding somewhat rough or uncouth
+
+#### Third person singular
+
+It's almost universal to use names when talking about single other people.
+The only exception is when talking about someone whose name is not known, in which case
+*` + gl("that CL.human") + `* or *` + gl("yon CL.human") + `* "that person" can be used.
+
+#### Plural pronouns
+
+Plural pronouns are standard and always used rather than names or some other manner of description.
+
+*` + gl("1P.EXCL") + `* is the exclusive first person plural pronoun ("we" excluding the listener).
+
+*` + gl("1P.INCL") + `* is the inclusive equivalent ("we" including the listener).
+
+*` + gl("2P") + `* is the second person plural pronoun.
+
+*` + gl("3P") + `* is the third person plural pronoun.
+
+### Demonstrative pronouns
+
+Sauna has three levels of distance for demonstratives:
+
+- *` + gl("this") + `* is proximal ("this")
+
+- *` + gl("that") + `* is medial ("that by you, that nearby")
+
+- *` + gl("yon") + `* is distal ("that over there, yon")
+
+There is also an indefinite pronoun *` + gl("some") + `* which by itself means "some, any" and is also used to form negative existentials and questions.
+
+Demonstrative pronouns have similar syntax to numerals. They can appear by themselves:
+
+` + glossedSentence("that-NOM take-PST-S1S", "I took it.") + `
+
+or directly with classifiers:
+
+` + glossedSentence("that CL.general-NOM take-PST-S1S", "I took that thing.") + `
+
+` + glossedSentence("yon CL.human-GEN see-PST-S1S", "I saw that person.") + `
+
+To be attributive, demonstratives are marked with the genitive:
+
+` + glossedSentence("yon-GEN magpie-GEN see-PST-S1S", "I saw that magpie.") + `
+
+Demonstratives by themselves can mean "here" and "there" using the adpositional cases:
+
+` + glossedSentence("yon-ALL go-NPT-S1S", "I'm going there.") + `
+
+` + glossedSentence("home-P1S-NOM this-LOC be-NPT-S2/3S", "My house is here.") + `
+
+To retain the sense of a location, they must use the locative case as a topic, even though locations otherwise can be topic without overt locative marking:
+
+` + glossedSentence("home-TOP woman-NOM be-NPT-S2/3S", "There's a woman in the house.") + `
+
+` + glossedSentence("yon-LOC-TOP woman-NOM be-NPT-S2/3S", "There's a woman over there.") + `
+
+` + glossedSentence("*yon-TOP woman-NOM be-NPT-S2/3S", "There's a woman over there.") + `
+
+## Syntax
+
+### General word order
+
+The order of a Sauna clause is generally topic, subject (if it is distinct), oblique phrases, direct object, verb.
+However, case marking makes this somewhat flexible; the only rigid rule is that the verb must come last.
+
+` + glossedSentence("today-TOP woman-NOM magpie-ALL acorn-PAR give-PST-S2/3S", "Today the woman gave the magpie acorns.") + `
+
+If there are multiple predicates due to the use of the conjunctive verb form, their obliques and direct object are ordered
+the same way before each respective verb:
+
+` + glossedSentence("water-NOM drink-CNJ home-NOM build-PST-S1S", "I drank water as I built the house.") + `
+
+### Existentials, to have, to be
+
+The verb *` + gl("be") + `* essentially means "to exist".
+
+` + glossedSentence("yon-LOC-TOP magpie-NOM be-NPT-S2/3S", "There's a magpie over there.") + `
+
+With a topic, it can be used to mean "have":
+
+` + glossedSentence("1S.polite-TOP home-NOM be-NPT-S2/3S", "I have a house.") + `
+
+To equate two nouns, the equative case is used:
+
+` + glossedSentence("woman-EQU be-NPT-S1S", "I am a woman.") + `
+
+` + glossedSentence("that-NOM home-EQU be-NPT-S2/3S", "It is a house.") + `
+
+### Questions
+
+Sauna uses an interrogative suffix *-kU* which attaches to some element of the sentence to form a question, going after all other suffixes.
+
+For polar questions, this is generally the verb:
+
+` + glossedSentence("yon-ALL go-PST-S2/3S-INT", "Did you go there?") + `
+
+although the interrogative particle can go on another element to specifically make it the contrastive focus of the question:
+
+` + glossedSentence("yon-ALL-INT go-PST-S2/3S", "Is that where you went?") + `
+
+For content questions, the interrogative particle is placed onto a noun phrase with the indefinite demonstrative.
+
+` + glossedSentence("some-ALL-INT go-PST-S2/3S", "Where did you go?") + `
+
+` + glossedSentence("some-NOM-INT eat-PST-S2/3S", "What did you eat?") + `
+
+` + glossedSentence("2S.formal-TOP some-GEN cup-NOM-INT good-NPT-S2/3S", "Which cup do you like?") + `
+
+Combining the indefinite with classifiers is a productive way to more specifically ask "what", "which", or "who"?
+
+` + glossedSentence("2S.formal-TOP some CL.human-GEN-INT good-NPT-S2/3S", "Who do you like?") + `
+
+### Imperatives and cohortatives
+
+Sauna imperatives are formed by using the bare verb stem:
+
+` + glossedSentence("ALL-P1S give", "Give it to me.") + `
+
+This can sound rather blunt. There is a verb *` + gl("do.please") + `* which is specifically used act as a softer imperative,
+with the actual verb being requested coming before in conjunctive form:
+
+` + glossedSentence("ALL-P1S give-CNJ do.please", "Please give it to me.") + `
+
+This can actually be overly formal and polite. The most neutral way to pose a request, neither blunt and urgent nor overly formal,
+is to omit *` + gl("do.please") + `* and leave the bare conjunctive.
+
+` + glossedSentence("ALL-P1S give-CNJ", "Give it to me.") + `
+
+The normal way to express a cohortative is with the non-past tense, plural conjugation plus interrogative particle.
+Note that this literally just asks about a group, but the implication can be cohortative if it makes sense contextually:
+
+` + glossedSentence("go-NPT-SP-INT", "Are they going?/Are we going?/Let's go!") + `
 
 `)
 
