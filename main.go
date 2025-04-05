@@ -7,6 +7,7 @@ import (
 	"slices"
 	"strings"
 
+	"github.com/cstuartroe/sauna/gendocs"
 	"github.com/cstuartroe/sauna/gloss"
 	"github.com/cstuartroe/sauna/lang"
 )
@@ -88,6 +89,7 @@ var commands = map[string]func(){
 	"test_suffixes": testSuffixes,
 	"real_suffixes": testActualSuffixes,
 	"gloss":         cliGloss,
+	"docs":          gendocs.GenerateDocs,
 }
 
 func main() {
