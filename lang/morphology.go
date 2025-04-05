@@ -175,7 +175,7 @@ func init() {
 }
 
 var NumberSuffixes = map[string]ProtoSuffix{
-	"pl": {
+	"PL": {
 		syllables: []ProtoSyllable{
 			{
 				Nucleus: Front,
@@ -184,8 +184,24 @@ var NumberSuffixes = map[string]ProtoSuffix{
 	},
 }
 
+var PossessorSuffixes = map[string]ProtoSuffix{
+	"P1S": {
+		leadingCoda: Nasal,
+	},
+	"P2/3S": {
+		leadingCoda: Stop,
+	},
+	"P1P": {
+		leadingCoda: Nasal,
+		syllables:   []ProtoSyllable{{M, Front, 0, Stop}},
+	},
+	"P2/3P": {
+		syllables: []ProtoSyllable{{V, Front, 0, Stop}},
+	},
+}
+
 var CaseSuffixes = map[string]ProtoSuffix{
-	"top": {
+	"TOP": {
 		syllables: []ProtoSyllable{
 			{
 				Onset:   V,
@@ -193,11 +209,15 @@ var CaseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"nom": {},
-	"par": {
+	"NOM": {},
+	"PAR": {
 		leadingCoda: Stop,
 	},
-	"ben": {
+	"EQU": {
+		leadingCoda: Fricative,
+		syllables:   []ProtoSyllable{{S, Front, 0, 0}},
+	},
+	"DAT": {
 		leadingCoda: Nasal,
 		syllables: []ProtoSyllable{
 			{
@@ -206,7 +226,7 @@ var CaseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"gen": {
+	"GEN": {
 		lenite: true,
 		syllables: []ProtoSyllable{
 			{
@@ -214,7 +234,7 @@ var CaseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"all": {
+	"ALL": {
 		lenite: true,
 		syllables: []ProtoSyllable{
 			{
@@ -226,7 +246,7 @@ var CaseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"loc": {
+	"LOC": {
 		lenite: true,
 		syllables: []ProtoSyllable{
 			{
@@ -239,7 +259,7 @@ var CaseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"abl": {
+	"ABL": {
 		lenite: true,
 		syllables: []ProtoSyllable{
 			{
@@ -255,7 +275,7 @@ var CaseSuffixes = map[string]ProtoSuffix{
 }
 
 var VoiceSuffixes = map[string]ProtoSuffix{
-	"psv": {
+	"PSV": {
 		syllables: []ProtoSyllable{
 			{
 				Onset:   R,
@@ -263,7 +283,7 @@ var VoiceSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"cau": {
+	"CAU": {
 		syllables: []ProtoSyllable{
 			{
 				Onset:   S,
@@ -273,8 +293,19 @@ var VoiceSuffixes = map[string]ProtoSuffix{
 	},
 }
 
+var NegationSuffixes = map[string]ProtoSuffix{
+	"NEG": {
+		syllables: []ProtoSyllable{
+			{
+				Onset:   N,
+				Nucleus: Central,
+			},
+		},
+	},
+}
+
 var TenseSuffixes = map[string]ProtoSuffix{
-	"prs": {
+	"NPT": {
 		syllables: []ProtoSyllable{
 			{
 				Onset:   R,
@@ -282,10 +313,10 @@ var TenseSuffixes = map[string]ProtoSuffix{
 			},
 		},
 	},
-	"pst": {
+	"PST": {
 		leadingCoda: Fricative,
 	},
-	"cnt": {
+	"CNJ": {
 		syllables: []ProtoSyllable{
 			{
 				Onset:   T,
@@ -296,10 +327,11 @@ var TenseSuffixes = map[string]ProtoSuffix{
 }
 
 var SubjectSuffixes = map[string]ProtoSuffix{
-	"s1s": {
+	"S1S": {
 		leadingCoda: Nasal,
 	},
-	"spl": {
+	"S2/3S": {},
+	"SP": {
 		syllablesFunc: func(pw ProtoWord) []ProtoSyllable {
 			lastSyllable := pw.syllables[len(pw.syllables)-1]
 			var suffixSyllables = []ProtoSyllable{}
@@ -314,8 +346,10 @@ var SubjectSuffixes = map[string]ProtoSuffix{
 
 var SuffixSets = []map[string]ProtoSuffix{
 	NumberSuffixes,
+	PossessorSuffixes,
 	CaseSuffixes,
 	VoiceSuffixes,
+	NegationSuffixes,
 	TenseSuffixes,
 	SubjectSuffixes,
 }
