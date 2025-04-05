@@ -534,6 +534,31 @@ func GenerateReadme() string {
 	return content
 }
 
+func GenerateNorthWind() string {
+	content := ""
+
+	content += section(gl("north-GEN wind-GEN companion-P2/3S-EQU sun-TOP some CL.human-NOM-INT ABL strong-CNJ-GEN-DAT fight-PST-SP"))
+
+	content += section(gl("that-ABL-TOP cozy cloth-NOM carry travel man-NOM near-ALL go-PST-S2/3S"))
+
+	content += section(gl("3P-TOP cloth-NOM remove-CAU-CNJ succeed CL.human-NOM ABL strong CL.human-EQU call-PSV-CNJ-LOC one way-NOM be-PST-S2/3S"))
+
+	content += section(gl("that-ABL-TOP north-GEN wind-NOM strenuous-EQU blow-PST-S2/3S"))
+
+	content += section(gl("but north-GEN wind-TOP some-EQU strenuous-EQU blow time-LOC travel man-NOM that-EQU cuddle-EQU cloth-NOM wrap-PST-S2/3S"))
+
+	content += section(gl("ending-P2/3S-TOP north-GEN wind-NOM abate-PST-S2/3S"))
+
+	content += section(gl("that-ABL-TOP sun-NOM hot-CNJ shine-PST-S2/3S"))
+
+	content += section(gl("travel man-NOM immediately cloth-NOM remove-PST-S2/3S"))
+
+	content += section(gl("this way-TOP north-GEN wind-NOM sun-GEN ABL strong CL.human-EQU call-CAU-PSV-PST-S2/3S"))
+
+	return content
+}
+
 func GenerateDocs() {
 	os.WriteFile("README.md", []byte(GenerateReadme()), 0)
+	os.WriteFile("North Wind.md", []byte(GenerateNorthWind()), 0)
 }

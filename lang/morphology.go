@@ -344,6 +344,12 @@ var SubjectSuffixes = map[string]ProtoSuffix{
 	},
 }
 
+var InterrogativeSuffixes = map[string]ProtoSuffix{
+	"INT": {
+		syllables: []ProtoSyllable{{K, Back, 0, 0}},
+	},
+}
+
 var SuffixSets = []map[string]ProtoSuffix{
 	NumberSuffixes,
 	PossessorSuffixes,
@@ -352,4 +358,5 @@ var SuffixSets = []map[string]ProtoSuffix{
 	NegationSuffixes,
 	TenseSuffixes,
 	SubjectSuffixes,
+	InterrogativeSuffixes,
 }

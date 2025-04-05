@@ -19,6 +19,7 @@ var _dictionary = map[string]string{
 	"this": "ko",
 	"that": "so",
 	"yon":  "no",
+	"some": "to",
 
 	// Nouns
 	"birch":  "iuvx",
@@ -28,22 +29,42 @@ var _dictionary = map[string]string{
 	"acorn":  "ora",
 	"home":   "tiuru",
 	"woman":  "kuni",
+	"man":    "vxrx",
+	"north":  "vaonae",
 	"south":  "vxirun",
 	"tail":   "xrxku",
+	"wind":   "meta",
+	"sun":    "tapa",
+	"cloth":  "askan",
+	"time":   "yame",
+	"ending": "isni",
 
 	// Verbs/adjectives
-	"be":    "na",
-	"eat":   "eta",
-	"go":    "yato",
-	"small": "iyx",
-	"long":  "narae",
-	"see":   "upx",
-	"hard":  "kotare",
-	"build": "tata",
-	"give":  "oko",
-	"take":  "vet",
-	"sing":  "yuru",
-	"good":  "tae",
+	"be":      "na",
+	"eat":     "eta",
+	"go":      "yato",
+	"small":   "iyx",
+	"long":    "narae",
+	"see":     "upx",
+	"hard":    "kotare",
+	"build":   "tata",
+	"give":    "oko",
+	"take":    "vet",
+	"sing":    "yuru",
+	"good":    "tae",
+	"fight":   "xkxsrit",
+	"strong":  "puxti",
+	"cozy":    "txtvin",
+	"carry":   "nxtxn",
+	"travel":  "tangae",
+	"remove":  "nuuvi",
+	"succeed": "kxsni",
+	"call":    "eyo",
+	"wrap":    "ovanke",
+	"blow":    "puu",
+	"abate":   "ayeo",
+	"hot":     "sxsi",
+	"shine":   "pate",
 
 	// Numerals
 	"one":   "u",
@@ -53,13 +74,16 @@ var _dictionary = map[string]string{
 
 	// Numeral classifiers
 	"CL.general":      "te",
-	"CL.human":        "nit",
+	"CL.human":        "na",
 	"CL.animal":       "tiri",
 	"CL.small.object": "kui",
 	"CL.piece":        "pisx",
+	"way":             "saya",
 
 	// Quality nouns
-	"sneaky": "pitrivitri",
+	"sneaky":    "pitrivitri",
+	"strenuous": "natanata",
+	"cuddle":    "tonyara",
 
 	// Positional nouns/postpositions
 	"ALL": "ni",
@@ -67,6 +91,11 @@ var _dictionary = map[string]string{
 	"ABL": "xsti",
 
 	"inside":    "mu",
+	"near":      "kxtu",
 	"companion": "ki",
 	"without":   "tutvx",
+
+	// Adverbs/conjunctions
+	"but":         "erape",
+	"immediately": "pxti",
 }
