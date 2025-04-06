@@ -7,6 +7,8 @@ type ProtoSuffix struct {
 	syllablesFunc func(ProtoWord) []ProtoSyllable
 }
 
+func (s ProtoSuffix) Lenite() bool { return s.lenite }
+
 var epentheticVowel VowelFrontness = Front
 
 func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {

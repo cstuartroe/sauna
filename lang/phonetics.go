@@ -10,7 +10,7 @@ type Syllable interface {
 	Moras() int
 }
 
-type Word interface {
+type Romanizable interface {
 	Romanization() string
 }
 

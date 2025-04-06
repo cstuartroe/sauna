@@ -28,37 +28,40 @@ func glossedSentence(s string, translation string) string {
 		wrong = true
 	}
 
-	glossParts := strings.Split(s, " ")
 	words, err := gloss.ParseGloss(s)
 	if err != nil {
 		panic(err)
 	}
 
 	wordsLine := ""
+	morphemesLine := ""
 	glossLine := ""
 
 	if wrong {
 		wordsLine += "*"
+		morphemesLine += "*"
 		glossLine += " "
 	}
 
-	if len(words) != len(glossParts) {
-		panic("Unequal gloss lengths")
-	}
-
 	for i := 0; i < len(words); i++ {
-		rom := words[i].Romanization()
+		rom := words[i].Word.Romanization()
+		morphemes := ""
+		glosses := ""
 
-		maxLen := len(rom)
-		if len(glossParts[i]) > maxLen {
-			maxLen = len(glossParts[i])
+		for _, gw := range words[i].Pieces {
+			maxLen := max(len(gw.Form), len(gw.Gloss))
+			morphemes += fmt.Sprintf("%-*s", maxLen, gw.Form)
+			glosses += fmt.Sprintf("%-*s", maxLen, gw.Gloss)
 		}
 
+		maxLen := max(len(rom), len(morphemes))
+
 		wordsLine += fmt.Sprintf("%-*s", maxLen+1, rom)
-		glossLine += fmt.Sprintf("%-*s", maxLen+1, glossParts[i])
+		morphemesLine += fmt.Sprintf("%-*s", maxLen+1, morphemes)
+		glossLine += fmt.Sprintf("%-*s", maxLen+1, glosses)
 	}
 
-	return fmt.Sprintf("```\n%s\n%s\n%q\n```", wordsLine, glossLine, translation)
+	return fmt.Sprintf("```\n%s\n%s\n%s\n%q\n```", wordsLine, morphemesLine, glossLine, translation)
 }
 
 func applyToChildren(n ast.Node, f func(child ast.Node)) {

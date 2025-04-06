@@ -134,8 +134,9 @@ It is also strictly suffixing, with suffixes stacking in an agglutinative fashio
 Sauna is generally pro-drop, with arbitrary arguments being permitted to be left out of the sentence when clear from context:
 
 ```
-tiuruoni yatos        
-home-ALL go-PST-S2/3S 
+tiuruoni   yatos            
+tiuru-'AnI yato-s  -∅       
+home -ALL  go  -PST-S2/3S   
 "(He) went home."
 ```
 
@@ -192,44 +193,50 @@ The topic is marked with the topical case marker *-vA* and generally comes first
 The topic may have a variety of semantic roles in the sentence, including agent, patient, experiencer, location, or possessor of some other argument.
 
 ```
-kunive    tiuruoni yatos        
-woman-TOP home-ALL go-PST-S2/3S 
+kunive    tiuruoni   yatos            
+kuni -vA  tiuru-'AnI yato-s  -∅       
+woman-TOP home -ALL  go  -PST-S2/3S   
 "The woman went home."
 ```
 
 ```
-eyokateva     ereku    narairo        
-magpie-PL-TOP tail-NOM long-NPT-S2/3S 
+eyokateva     ereku       narairo           
+eyokat-i -vA  ereku-∅     narai-rU -∅       
+magpie-PL-TOP tail -NOM   long -NPT-S2/3S   
 "Magpies have long tails."
 ```
 
 The topic is often implied to be contrastive, especiialy when the its semantic role is something other than agent or patient.
 
 ```
-veirumme  iuvei        iyeruu       
-south-TOP birch-PL-NOM small-NPT-SP 
+veirumme   iuvei          iyeruu       
+veirun-vA  iuve -i -∅     iye  -rU -X  
+south -TOP birch-PL-NOM   small-NPT-SP 
 "In the south, the birch trees are small."
 ```
 
 For roles other than agent, patient, location, or possessor, the topical case suffix may be stacked on top of another:
 
 ```
-tiuruonive   kuni      yatos        
-home-ALL-TOP woman-NOM go-PST-S2/3S 
+tiuruonive     kuni        yatos            
+tiuru-'AnI-vA  kuni -∅     yato-s  -∅       
+home -ALL -TOP woman-NOM   go  -PST-S2/3S   
 "Home is where the woman went."
 ```
 
 For some constructions, a particular argument must be the topic.
 
 ```
-eyokateva     ereku    naro         
-magpie-PL-TOP tail-NOM be-NPT-S2/3S 
+eyokateva     ereku       naro           
+eyokat-i -vA  ereku-∅     na-rU -∅       
+magpie-PL-TOP tail -NOM   be-NPT-S2/3S   
 "Magpies have tails."
 ```
 
 ```
-aremma        eyokate       tairou      
-1S.polite-TOP magpie-PL-NOM good-NPT-SP 
+aremma        eyokate         tairou      
+aren     -vA  eyokat-i -∅     tai -rU -X  
+1S.polite-TOP magpie-PL-NOM   good-NPT-SP 
 "I like magpies."
 ```
 
@@ -238,22 +245,25 @@ aremma        eyokate       tairou
 The nominative is used for agents and inanimate patients. It is unmarked.
 
 ```
-eyokappa   ora       etas          
-magpie-TOP acorn-NOM eat-PST-S2/3S 
+eyokappa   ora         etas            
+eyokat-vA  ora  -∅     eta-s  -∅       
+magpie-TOP acorn-NOM   eat-PST-S2/3S   
 "The magpie ate an acorn."
 ```
 
 ```
-orava     eyokat     etas          
-acorn-TOP magpie-NOM eat-PST-S2/3S 
+orava     eyokat       etas            
+ora  -vA  eyokat-∅     eta-s  -∅       
+acorn-TOP magpie-NOM   eat-PST-S2/3S   
 "An acorn is what the magpie ate."
 ```
 
 As a general rule, if the agent and patient are both in the nominative case, the agent should come first.
 
 ```
-eyokat     ora       etas          
-magpie-NOM acorn-NOM eat-PST-S2/3S 
+eyokat       ora         etas            
+eyokat-∅     ora  -∅     eta-s  -∅       
+magpie-NOM   acorn-NOM   eat-PST-S2/3S   
 "The magpie ate an acorn."
 ```
 
@@ -265,16 +275,18 @@ The first is to mark a noun as a possessor or modifier of another noun. Note tha
 a genitive modifier as well is generally not needed except to clarify third person possessors.
 
 ```
-kunie     tiurut     
-woman-GEN home-P2/3S 
+kunie     tiurut      
+kuni -'A  tiuru-t     
+woman-GEN home -P2/3S 
 "the woman's home"
 ```
 
 A common type of modification other than possession is to use quality nouns attributively:
 
 ```
-hirrivirrie kuni  
-sneaky-GEN  woman 
+hirrivirrie    kuni  
+hirrivirri-'A  kuni  
+sneaky    -GEN woman 
 "sneaky woman"
 ```
 
@@ -282,6 +294,7 @@ The second function is to mark animate patients.
 
 ```
 kunie     uhesin      
+kuni -'A  uhe-s  -n   
 woman-GEN see-PST-S1S 
 "I saw the woman."
 ```
@@ -292,13 +305,15 @@ to convey. This is similar to how it's possible to use either "it" or gendered p
 
 ```
 eyokara    uhesin      
+eyokat-'A  uhe-s  -n   
 magpie-GEN see-PST-S1S 
 "I saw the magpie."
 ```
 
 ```
-eyokat     uhesin      
-magpie-NOM see-PST-S1S 
+eyokat       uhesin      
+eyokat-∅     uhe-s  -n   
+magpie-NOM   see-PST-S1S 
 "I saw the magpie."
 ```
 
@@ -310,22 +325,25 @@ The first function is to mark a direct object where the verb was unsuccessful or
 The plurality of the partitive noun is ambiguous.
 
 ```
-eyokat     orat      etas          
-magpie-NOM acorn-PAR eat-PST-S2/3S 
+eyokat       orat      etas            
+eyokat-∅     ora  -t   eta-s  -∅       
+magpie-NOM   acorn-PAR eat-PST-S2/3S   
 "The magpie ate some acorns."
 ```
 
 Contrast this with
 
 ```
-eyokat     ora       etas          
-magpie-NOM acorn-NOM eat-PST-S2/3S 
+eyokat       ora         etas            
+eyokat-∅     ora  -∅     eta-s  -∅       
+magpie-NOM   acorn-NOM   eat-PST-S2/3S   
 "The magpie ate the acorn."
 ```
 
 ```
-eyokat     orai         etas          
-magpie-NOM acorn-PL-NOM eat-PST-S2/3S 
+eyokat       orai           etas            
+eyokat-∅     ora  -i -∅     eta-s  -∅       
+magpie-NOM   acorn-PL-NOM   eat-PST-S2/3S   
 "The magpie ate the acorns."
 ```
 
@@ -333,6 +351,7 @@ The second function is to adjoin the noun to a cardinal number.
 
 ```
 eyokatet   sone  tiri      
+eyokat-t   sone  tiri      
 magpie-PAR three CL.animal 
 "three magpies"
 ```
@@ -345,6 +364,7 @@ The first way is to mark the complement of a copula:
 
 ```
 kunissi   naron      
+kuni -ssI na-rU -n   
 woman-EQU be-NPT-S1S 
 "I am a woman."
 ```
@@ -352,16 +372,18 @@ woman-EQU be-NPT-S1S
 The second way is to indicate manner or similarity:
 
 ```
-nappasse  kotarero       
-stone-EQU hard-NPT-S2/3S 
+nappasse  kotarero           
+nappa-ssI kotare-rU -∅       
+stone-EQU hard  -NPT-S2/3S   
 "It is hard like a stone."
 ```
 
 This includes using quality nouns adverbially:
 
 ```
-hirrivirrissi tiuruoni yatosen    
-sneaky-EQU    home-ALL go-PST-S1S 
+hirrivirrissi  tiuruoni   yatosen      
+hirrivirri-ssI tiuru-'AnI yato-s  -n   
+sneaky    -EQU home -ALL  go  -PST-S1S 
 "I went home sneakily."
 ```
 
@@ -370,14 +392,16 @@ sneaky-EQU    home-ALL go-PST-S1S
 The dative case, marked with *-nyU*, is used to mark a benefactor or motive.
 
 ```
-kuninyu   tiuru    tatasen       
-woman-DAT home-NOM build-PST-S1S 
+kuninyu   tiuru       tatasen       
+kuni -nyU tiuru-∅     tata -s  -n   
+woman-DAT home -NOM   build-PST-S1S 
 "I built the woman a home."
 ```
 
 ```
-nappat    veteanyo         senguoni  yatosen    
-stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S 
+nappat    veteanyo         senguoni   yatosen      
+nappa-t   vet -tI -'A -nyU senku-'AnI yato-s  -n   
+stone-PAR take-CNJ-GEN-DAT river-ALL  go  -PST-S1S 
 "I went to the river to get stones."
 ```
 
@@ -389,32 +413,36 @@ These three are all marked with suffixes based on the genitive suffix, and so al
 The allative is marked with the genitive suffix plus *-nI*, and indicates motion towards.
 
 ```
-tiuruoni yatos        
-home-ALL go-PST-S2/3S 
+tiuruoni   yatos            
+tiuru-'AnI yato-s  -∅       
+home -ALL  go  -PST-S2/3S   
 "He went home."
 ```
 
 The allative is also used for recipients.
 
 ```
-eyokarane  ora       okosen       
-magpie-ALL acorn-NOM give-PST-S1S 
+eyokarane   ora         okosen       
+eyokat-'AnI ora  -∅     oko -s  -n   
+magpie-ALL  acorn-NOM   give-PST-S1S 
 "I gave the magpie an acorn."
 ```
 
 The locative is marked with the genitive suffix plus *-ttI*, and indicates location at.
 
 ```
-tiuruotti naro         
-home-LOC  be-NPT-S2/3S 
+tiuruotti   naro           
+tiuru-'AttI na-rU -∅       
+home -LOC   be-NPT-S2/3S   
 "He is at home."
 ```
 
 The ablative is marked with the genitive suffix plus *-stI*, and indicates motion away.
 
 ```
-tiuruosti yatos        
-home-ABL  go-PST-S2/3S 
+tiuruosti   yatos            
+tiuru-'AstI yato-s  -∅       
+home -ABL   go  -PST-S2/3S   
 "He left home."
 ```
 
@@ -426,8 +454,9 @@ some other type of relationship.
 An example of such a noun is *mu* "inside":
 
 ```
-tiuruo   muretti          naro         
-home-GEN inside-P2/3S-LOC be-NPT-S2/3S 
+tiuruo    muretti            naro           
+tiuru-'A  mu    -t    -'AttI na-rU -∅       
+home -GEN inside-P2/3S-LOC   be-NPT-S2/3S   
 "He is inside the house."
 ```
 
@@ -435,16 +464,18 @@ Some such nouns conventionally only appear with a particular case, such as *ki*,
 may mean "companion," but which almost always appears in the equative case with a comitative meaning:
 
 ```
-kunive    kinissi           yatos        
-woman-TOP companion-P1S-EQU go-PST-S2/3S 
+kunive    kinissi           yatos            
+kuni -vA  ki       -n  -ssI yato-s  -∅       
+woman-TOP companion-P1S-EQU go  -PST-S2/3S   
 "The woman went with me."
 ```
 
 Other positional nouns don't require any case marking to be understood with an oblique meaning, such as *tuppe* "without":
 
 ```
-tuppemmit   
-without-P1P 
+tuppemmit    
+tuppe  -mmIt 
+without-P1P  
 "without us"
 ```
 
@@ -457,38 +488,44 @@ This is preferred over putting first person pronouns in the adpositional cases, 
 using a pronoun if there is no risk of ambiguity, but may not be used with an actual noun possessor.
 
 ```
-*so       arenane       okote    
- that-NOM 1S.polite-ALL give-CNJ 
+*so         arenane        okote    
+*so  -∅     aren     -'AnI oko -tI  
+ that-NOM   1S.polite-ALL  give-CNJ 
 "Give it to me."
 ```
 
 ```
-so       nin     okote    
-that-NOM ALL-P1S give-CNJ 
+so         nin     okote    
+so  -∅     ni -n   oko -tI  
+that-NOM   ALL-P1S give-CNJ 
 "Give it to me."
 ```
 
 ```
-so       sieni         okoron       
-that-NOM 2S.formal-ALL give-NPT-S1S 
+so         sieni          okoron       
+so  -∅     si       -'AnI oko -rU -n   
+that-NOM   2S.formal-ALL  give-NPT-S1S 
 "I'll give it to you."
 ```
 
 ```
-so       nit       okoron       
-that-NOM ALL-P2/3S give-NPT-S1S 
+so         nit       okoron       
+so  -∅     ni -t     oko -rU -n   
+that-NOM   ALL-P2/3S give-NPT-S1S 
 "I'll give it to you/him/her."
 ```
 
 ```
-so       kunieni   okoron       
-that-NOM woman-ALL give-NPT-S1S 
+so         kunieni    okoron       
+so  -∅     kuni -'AnI oko -rU -n   
+that-NOM   woman-ALL  give-NPT-S1S 
 "I'll give it to the woman"
 ```
 
 ```
-*so       kunie     nit       okoron       
- that-NOM woman-GEN ALL-P2/3S give-NPT-S1S 
+*so         kunie     nit       okoron       
+*so  -∅     kuni -'A  ni -t     oko -rU -n   
+ that-NOM   woman-GEN ALL-P2/3S give-NPT-S1S 
 "I'll give it to the woman"
 ```
 
@@ -508,13 +545,15 @@ For animate patients, this means that the case can shift from genitive to nomina
 
 ```
 eyokara    uherun      
+eyokat-'A  uhe-rU -n   
 magpie-GEN see-NPT-S1S 
 "I see the magpie."
 ```
 
 ```
-eyokat     uhere         
-magpie-NOM see-PSV-S2/3S 
+eyokat       uhere           
+eyokat-∅     uhe-rA -∅       
+magpie-NOM   see-PSV-S2/3S   
 "The magpie is seen."
 ```
 
@@ -523,25 +562,29 @@ or if it is inanimate (inanimate nouns use the nominative case as both subject a
 
 ```
 eyokappa   uherun      
+eyokat-vA  uhe-rU -n   
 magpie-TOP see-NPT-S1S 
 "I see the magpie."
 ```
 
 ```
-eyokappa   uhere         
-magpie-TOP see-PSV-S2/3S 
+eyokappa   uhere           
+eyokat-vA  uhe-rA -∅       
+magpie-TOP see-PSV-S2/3S   
 "The magpie is seen."
 ```
 
 ```
-ora       uherun      
-acorn-NOM see-NPT-S1S 
+ora         uherun      
+ora  -∅     uhe-rU -n   
+acorn-NOM   see-NPT-S1S 
 "I see the acorn."
 ```
 
 ```
-ora       uhere         
-acorn-NOM see-PSV-S2/3S 
+ora         uhere           
+ora  -∅     uhe-rA -∅       
+acorn-NOM   see-PSV-S2/3S   
 "The acorn is seen."
 ```
 
@@ -549,16 +592,18 @@ The same affix may be used with a potential sense.
 This still entails promoting the object to subject; there may be ambiguity between the potential and plain passive.
 
 ```
-eyokat     uhere         
-magpie-NOM see-PSV-S2/3S 
+eyokat       uhere           
+eyokat-∅     uhe-rA -∅       
+magpie-NOM   see-PSV-S2/3S   
 "The magpie is seen/visible."
 ```
 
 However, in the potential sense, an agent may be stated; if so, it is the topic, and the verb is still conjugated for the patient.
 
 ```
-aremma        eyokat     uhere         
-1S.polite-TOP magpie-NOM see-PSV-S2/3S 
+aremma        eyokat       uhere           
+aren     -vA  eyokat-∅     uhe-rA -∅       
+1S.polite-TOP magpie-NOM   see-PSV-S2/3S   
 "I can see the magpie."
 ```
 
@@ -567,8 +612,9 @@ aremma        eyokat     uhere
 The causative, marked with *-sA*, is used to convey forcing or enabling someone or something to do something. The causee is marked with the dative case.
 
 ```
-kuninyu   tiuruoni yatosasen      
-woman-DAT home-ALL go-CAU-PST-S1S 
+kuninyu   tiuruoni   yatosasen        
+kuni -nyU tiuru-'AnI yato-sA -s  -n   
+woman-DAT home -ALL  go  -CAU-PST-S1S 
 "I made the woman go home."
 ```
 
@@ -577,14 +623,16 @@ woman-DAT home-ALL go-CAU-PST-S1S
 Verbs are negated with the suffix *-nA*.
 
 ```
-so       etanasen        
-that-NOM eat-NEG-PST-S1S 
+so         etanasen        
+so  -∅     eta-nA -s  -n   
+that-NOM   eat-NEG-PST-S1S 
 "I didn't eat it."
 ```
 
 ```
-eyokat     uherene           
-magpie-NOM see-PSV-NEG-S2/3S 
+eyokat       uherene             
+eyokat-∅     uhe-rA -nA -∅       
+magpie-NOM   see-PSV-NEG-S2/3S   
 "The magpie is not visible."
 ```
 
@@ -597,8 +645,9 @@ Verbs can be marked for past or non-past tense.
 The non-past is versatile in use, being usable for simple present, gnomic, and future senses.
 
 ```
-eyokappa   orat      etaro         
-magpie-TOP acorn-PAR eat-NPT-S2/3S 
+eyokappa   orat      etaro           
+eyokat-vA  ora  -t   eta-rU -∅       
+magpie-TOP acorn-PAR eat-NPT-S2/3S   
 "The magpie eats acorns./The magpie is eating acorns./The magpie will eat acorns."
 ```
 
@@ -606,8 +655,9 @@ The explicit non-past suffix is *-rU*. However, it is only used if there are no 
 If there are voice or negation suffixes applied, the non-past is zero-marked.
 
 ```
-eyokappa   orat      etana         
-magpie-TOP acorn-PAR eat-NEG-S2/3S 
+eyokappa   orat      etana           
+eyokat-vA  ora  -t   eta-nA -∅       
+magpie-TOP acorn-PAR eat-NEG-S2/3S   
 "The magpie doesn't eat acorns./The magpie isn't eating acorns./The magpie won't eat acorns."
 ```
 
@@ -616,8 +666,9 @@ magpie-TOP acorn-PAR eat-NEG-S2/3S
 The past tense is marked with *-s*.
 
 ```
-eyokappa   orat      etas          
-magpie-TOP acorn-PAR eat-PST-S2/3S 
+eyokappa   orat      etas            
+eyokat-vA  ora  -t   eta-s  -∅       
+magpie-TOP acorn-PAR eat-PST-S2/3S   
 "The magpie ate acorns."
 ```
 
@@ -640,14 +691,16 @@ The conjunctive is non-finite form of verbs which replaces tense and person mark
 Its core function is as a converb, to convey simultaneous or sequential action by the same subject:
 
 ```
-yuruti   tiuruoni yatosen    
-sing-CNJ home-ALL go-PST-S1S 
+yuruti   tiuruoni   yatosen      
+yuru-tI  tiuru-'AnI yato-s  -n   
+sing-CNJ home -ALL  go  -PST-S1S 
 "I sang as I went home."
 ```
 
 ```
-nappat    vette    tiuru    tatasen       
-stone-PAR take-CNJ home-NOM build-PST-S1S 
+nappat    vette    tiuru       tatasen       
+nappa-t   vet -tI  tiuru-∅     tata -s  -n   
+stone-PAR take-CNJ home -NOM   build-PST-S1S 
 "I got some rocks and built a house."
 ```
 
@@ -655,6 +708,7 @@ As an extension of this, it is used with *na* "be" to convey a progressive aspec
 
 ```
 etate   naron      
+eta-tI  na-rU -n   
 eat-CNJ be-NPT-S1S 
 "I'm eating."
 ```
@@ -665,16 +719,18 @@ Verbs can be turned into nouns, which can either refer to a single instance of p
 by adding the conjunctive suffix and the genitive case suffix. Other case suffixes then stack on top of the genitive suffix.
 
 ```
-aremma        etarea          tairo          
-1S.polite-TOP eat-CNJ-GEN-NOM good-NPT-S2/3S 
+aremma        etarea            tairo            
+aren     -vA  eta-tI -'A -∅     tai -rU -∅       
+1S.polite-TOP eat-CNJ-GEN-NOM   good-NPT-S2/3S   
 "I like eating."
 ```
 
 Arguments of the nominalized verb can branch leftward from the verb:
 
 ```
-nappat    veteanyo         senguoni  yatosen    
-stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S 
+nappat    veteanyo         senguoni   yatosen      
+nappa-t   vet -tI -'A -nyU senku-'AnI yato-s  -n   
+stone-PAR take-CNJ-GEN-DAT river-ALL  go  -PST-S1S 
 "I went to the river to get stones."
 ```
 
@@ -730,6 +786,7 @@ Sauna uses numeral classifiers with cardinal numbers:
 
 ```
 eyokatet   sone  tiri      
+eyokat-t   sone  tiri      
 magpie-PAR three CL.animal 
 "three magpies"
 ```
@@ -738,6 +795,7 @@ The classifiers are effectively nouns. They take the case marking for the phrase
 
 ```
 eyokatet   sone  tirinyu       
+eyokat-t   sone  tiri     -nyU 
 magpie-PAR three CL.animal-DAT 
 "for three magpies"
 ```
@@ -745,13 +803,15 @@ magpie-PAR three CL.animal-DAT
 Some nouns can even double as numeral classifiers:
 
 ```
-kiitet  sone  te         
-cup-PAR three CL.general 
+kiitet    sone  te         
+kiite-t   sone  te         
+cup  -PAR three CL.general 
 "three cups"
 ```
 
 ```
 vetat     sone  kiite 
+veta -t   sone  kiite 
 water-PAR three cup   
 "three cups of water"
 ```
@@ -774,6 +834,7 @@ To make numbers ordinal, they should appear as a modifier of the noun in the gen
 
 ```
 sonea     eyokat 
+sone -'A  eyokat 
 three-GEN magpie 
 "the third magpie"
 ```
@@ -782,6 +843,7 @@ three-GEN magpie
 
 ```
 ensoiya       eyokat 
+ensoi    -'A  eyokat 
 beginning-GEN magpie 
 "the first magpie"
 ```
@@ -848,21 +910,24 @@ There is also an indefinite pronoun *to* which by itself means "some, any" and i
 Demonstrative pronouns have similar syntax to numerals. They can appear by themselves:
 
 ```
-so       vetesen      
-that-NOM take-PST-S1S 
+so         vetesen      
+so  -∅     vet -s  -n   
+that-NOM   take-PST-S1S 
 "I took it."
 ```
 
 or directly with classifiers:
 
 ```
-so   te             vetesen      
-that CL.general-NOM take-PST-S1S 
+so   te               vetesen      
+so   te        -∅     vet -s  -n   
+that CL.general-NOM   take-PST-S1S 
 "I took that thing."
 ```
 
 ```
 no  naa          uhesin      
+no  na      -'A  uhe-s  -n   
 yon CL.human-GEN see-PST-S1S 
 "I saw that person."
 ```
@@ -871,6 +936,7 @@ To be attributive, demonstratives are marked with the genitive:
 
 ```
 noa     eyokara    uhesin      
+no -'A  eyokat-'A  uhe-s  -n   
 yon-GEN magpie-GEN see-PST-S1S 
 "I saw that magpie."
 ```
@@ -878,34 +944,39 @@ yon-GEN magpie-GEN see-PST-S1S
 Demonstratives by themselves can mean "here" and "there" using the adpositional cases:
 
 ```
-noane   yatoron    
-yon-ALL go-NPT-S1S 
+noane    yatoron      
+no -'AnI yato-rU -n   
+yon-ALL  go  -NPT-S1S 
 "I'm going there."
 ```
 
 ```
-tiurun       koatte   naro         
-home-P1S-NOM this-LOC be-NPT-S2/3S 
+tiurun          koatte     naro           
+tiuru-n  -∅     ko  -'AttI na-rU -∅       
+home -P1S-NOM   this-LOC   be-NPT-S2/3S   
 "My house is here."
 ```
 
 To retain the sense of a location, they must use the locative case as a topic, even though locations otherwise can be topic without overt locative marking:
 
 ```
-tiuruve  kuni      naro         
-home-TOP woman-NOM be-NPT-S2/3S 
+tiuruve   kuni        naro           
+tiuru-vA  kuni -∅     na-rU -∅       
+home -TOP woman-NOM   be-NPT-S2/3S   
 "There's a woman in the house."
 ```
 
 ```
-noatteva    kuni      naro         
-yon-LOC-TOP woman-NOM be-NPT-S2/3S 
+noatteva      kuni        naro           
+no -'AttI-vA  kuni -∅     na-rU -∅       
+yon-LOC  -TOP woman-NOM   be-NPT-S2/3S   
 "There's a woman over there."
 ```
 
 ```
-*nova    kuni      naro         
- yon-TOP woman-NOM be-NPT-S2/3S 
+*nova    kuni        naro           
+*no -vA  kuni -∅     na-rU -∅       
+ yon-TOP woman-NOM   be-NPT-S2/3S   
 "There's a woman over there."
 ```
 
@@ -917,8 +988,9 @@ The order of a Sauna clause is generally topic, subject (if it is distinct), obl
 However, case marking makes this somewhat flexible; the only rigid rule is that the verb must come last.
 
 ```
-kohava    kuni      eyokarane  orat      okos           
-today-TOP woman-NOM magpie-ALL acorn-PAR give-PST-S2/3S 
+kohava    kuni        eyokarane   orat      okos             
+koha -vA  kuni -∅     eyokat-'AnI ora  -t   oko -s  -∅       
+today-TOP woman-NOM   magpie-ALL  acorn-PAR give-PST-S2/3S   
 "Today the woman gave the magpie acorns."
 ```
 
@@ -926,8 +998,9 @@ If there are multiple predicates due to the use of the conjunctive verb form, th
 the same way before each respective verb:
 
 ```
-veta      neteti    tiuru    tatasen       
-water-NOM drink-CNJ home-NOM build-PST-S1S 
+veta        neteti    tiuru       tatasen       
+veta -∅     nete -tI  tiuru-∅     tata -s  -n   
+water-NOM   drink-CNJ home -NOM   build-PST-S1S 
 "I drank water as I built the house."
 ```
 
@@ -936,16 +1009,18 @@ water-NOM drink-CNJ home-NOM build-PST-S1S
 The verb *na* essentially means "to exist".
 
 ```
-noatteva    eyokat     naro         
-yon-LOC-TOP magpie-NOM be-NPT-S2/3S 
+noatteva      eyokat       naro           
+no -'AttI-vA  eyokat-∅     na-rU -∅       
+yon-LOC  -TOP magpie-NOM   be-NPT-S2/3S   
 "There's a magpie over there."
 ```
 
 With a topic, it can be used to mean "have":
 
 ```
-aremma        tiuru    naro         
-1S.polite-TOP home-NOM be-NPT-S2/3S 
+aremma        tiuru       naro           
+aren     -vA  tiuru-∅     na-rU -∅       
+1S.polite-TOP home -NOM   be-NPT-S2/3S   
 "I have a house."
 ```
 
@@ -953,13 +1028,15 @@ To equate two nouns, the equative case is used:
 
 ```
 kunissi   naron      
+kuni -ssI na-rU -n   
 woman-EQU be-NPT-S1S 
 "I am a woman."
 ```
 
 ```
-so       tiurussi naro         
-that-NOM home-EQU be-NPT-S2/3S 
+so         tiurussi  naro           
+so  -∅     tiuru-ssI na-rU -∅       
+that-NOM   home -EQU be-NPT-S2/3S   
 "It is a house."
 ```
 
@@ -970,44 +1047,50 @@ Sauna uses an interrogative suffix *-kU* which attaches to some element of the s
 For polar questions, this is generally the verb:
 
 ```
-noane   yatosko          
-yon-ALL go-PST-S2/3S-INT 
+noane    yatosko              
+no -'AnI yato-s  -∅    -kU    
+yon-ALL  go  -PST-S2/3S-INT   
 "Did you go there?"
 ```
 
 although the interrogative particle can go on another element to specifically make it the contrastive focus of the question:
 
 ```
-noaneko     yatos        
-yon-ALL-INT go-PST-S2/3S 
+noaneko      yatos            
+no -'AnI-kU  yato-s  -∅       
+yon-ALL -INT go  -PST-S2/3S   
 "Is that where you went?"
 ```
 
 For content questions, the interrogative particle is placed onto a noun phrase with the indefinite demonstrative.
 
 ```
-toaneko      yatos        
-some-ALL-INT go-PST-S2/3S 
+toaneko       yatos            
+to  -'AnI-kU  yato-s  -∅       
+some-ALL -INT go  -PST-S2/3S   
 "Where did you go?"
 ```
 
 ```
-toko         etas          
-some-NOM-INT eat-PST-S2/3S 
+toko           etas            
+to  -∅  -kU    eta-s  -∅       
+some-NOM-INT   eat-PST-S2/3S   
 "What did you eat?"
 ```
 
 ```
-sive          toa      kiiteku     tairo          
-2S.formal-TOP some-GEN cup-NOM-INT good-NPT-S2/3S 
+sive          toa      kiiteku         tairo            
+si       -vA  to  -'A  kiite-∅  -kU    tai -rU -∅       
+2S.formal-TOP some-GEN cup  -NOM-INT   good-NPT-S2/3S   
 "Which cup do you like?"
 ```
 
 Combining the indefinite with classifiers is a productive way to more specifically ask "what", "which", or "who"?
 
 ```
-sive          to   naako            tairo          
-2S.formal-TOP some CL.human-GEN-INT good-NPT-S2/3S 
+sive          to   naako            tairo            
+si       -vA  to   na      -'A -kU  tai -rU -∅       
+2S.formal-TOP some CL.human-GEN-INT good-NPT-S2/3S   
 "Who do you like?"
 ```
 
@@ -1017,6 +1100,7 @@ Sauna imperatives are formed by using the bare verb stem:
 
 ```
 nin     oko  
+ni -n   oko  
 ALL-P1S give 
 "Give it to me."
 ```
@@ -1026,6 +1110,7 @@ with the actual verb being requested coming before in conjunctive form:
 
 ```
 nin     okote    ketaikoa  
+ni -n   oko -tI  ketaikoa  
 ALL-P1S give-CNJ do.please 
 "Please give it to me."
 ```
@@ -1035,6 +1120,7 @@ is to omit *ketaikoa* and leave the bare conjunctive.
 
 ```
 nin     okote    
+ni -n   oko -tI  
 ALL-P1S give-CNJ 
 "Give it to me."
 ```
@@ -1043,8 +1129,9 @@ The normal way to express a cohortative is with the non-past tense, plural conju
 Note that this literally just asks about a group, but the implication can be cohortative if it makes sense contextually:
 
 ```
-yatorouko     
-go-NPT-SP-INT 
+yatorouko       
+yato-rU -X -kU  
+go  -NPT-SP-INT 
 "Are they going?/Are we going?/Let's go!"
 ```
 
