@@ -6,9 +6,9 @@ north -GEN wind-GEN companion-P2/3S-EQU sun -TOP some CL.human-NOM-INT   ABL  st
 ```
 
 ```
-soasteva       teppin askan       neten tangai vere       keruoni   yatos            
-so  -'AstI-vA  teppin askan-∅     neten tangai vere-∅     ketu-'AnI yato-s  -∅       
-that-ABL  -TOP cozy   cloth-NOM   carry travel man -NOM   near-ALL  go  -PST-S2/3S   
+soasteva       teppin askan       neten         tangai         vere       keruoni   yatos            
+so  -'AstI-vA  teppin askan-∅     neten-∅       tangai-∅       vere-∅     ketu-'AnI yato-s  -∅       
+that-ABL  -TOP cozy   cloth-NOM   carry-S2/3S   travel-S2/3S   man -NOM   near-ALL  go  -PST-S2/3S   
 "Then a traveling man wearing a warm cloth came by."
 ```
 
@@ -27,9 +27,9 @@ that-ABL  -TOP north -GEN wind-NOM   strenuous-EQU blow-PST-S2/3S
 ```
 
 ```
-erahe vaunaiya   metava   tosse    natanatasse   huu  yameatte   tangai vere       sosse    tonyarasse  askan       ovankes            
-erahe vaunai-'A  meta-vA  to  -ssI natanata -ssI huu  yame-'AttI tangai vere-∅     so  -ssI tonyara-ssI askan-∅     ovanke-s  -∅       
-but   north -GEN wind-TOP some-EQU strenuous-EQU blow time-LOC   travel man -NOM   that-EQU cuddle -EQU cloth-NOM   wrap  -PST-S2/3S   
+erahe vaunaiya   metava   tosse    natanatasse   huu  yameatte   tangai         vere       sosse    tonyarasse  askan       ovankes            
+erahe vaunai-'A  meta-vA  to  -ssI natanata -ssI huu  yame-'AttI tangai-∅       vere-∅     so  -ssI tonyara-ssI askan-∅     ovanke-s  -∅       
+but   north -GEN wind-TOP some-EQU strenuous-EQU blow time-LOC   travel-S2/3S   man -NOM   that-EQU cuddle -EQU cloth-NOM   wrap  -PST-S2/3S   
 "But the harder the North Wind blew, the more tightly the traveling man wrapped his cloth."
 ```
 
@@ -48,9 +48,9 @@ that-ABL  -TOP sun -NOM   hot -CNJ shine-PST-S2/3S
 ```
 
 ```
-tangai vere       heti        askan       nuuvis             
-tangai vere-∅     heti        askan-∅     nuuvi -s  -∅       
-travel man -NOM   immediately cloth-NOM   remove-PST-S2/3S   
+tangai         vere       heti        askan       nuuvis             
+tangai-∅       vere-∅     heti        askan-∅     nuuvi -s  -∅       
+travel-S2/3S   man -NOM   immediately cloth-NOM   remove-PST-S2/3S   
 "The traveling man immediately removed his cloth."
 ```
 

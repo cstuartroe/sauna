@@ -4,7 +4,7 @@ The North Wind and the Sun were disputing about who was stronger.
 ```
 
 ```
-that-ABL-TOP cozy cloth-NOM carry travel man-NOM near-ALL go-PST-S2/3S
+that-ABL-TOP cozy cloth-NOM carry-S2/3S travel-S2/3S man-NOM near-ALL go-PST-S2/3S
 Then a traveling man wearing a warm cloth came by.
 ```
 
@@ -19,7 +19,7 @@ Then the North Wind blew as hard as possible.
 ```
 
 ```
-but north-GEN wind-TOP some-EQU strenuous-EQU blow time-LOC travel man-NOM that-EQU cuddle-EQU cloth-NOM wrap-PST-S2/3S
+but north-GEN wind-TOP some-EQU strenuous-EQU blow time-LOC travel-S2/3S man-NOM that-EQU cuddle-EQU cloth-NOM wrap-PST-S2/3S
 But the harder the North Wind blew, the more tightly the traveling man wrapped his cloth.
 ```
 
@@ -34,7 +34,7 @@ Then the Sun shone warmly
 ```
 
 ```
-travel man-NOM immediately cloth-NOM remove-PST-S2/3S
+travel-S2/3S man-NOM immediately cloth-NOM remove-PST-S2/3S
 The traveling man immediately removed his cloth.
 ```
 

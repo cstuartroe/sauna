@@ -867,6 +867,11 @@ yon-LOC-TOP magpie-NOM be-NPT-S2/3S
 There's a magpie over there.
 ```
 
+```
+home-GEN inside-P2/3S-TOP some CL.human-NOM be-NPT-S2/3S
+Someone is in the house.
+```
+
 With a topic, it can be used to mean "have":
 
 ```
@@ -884,6 +889,52 @@ I am a woman.
 ```
 that-NOM home-EQU be-NPT-S2/3S
 It is a house.
+```
+
+#### Negative existentials
+
+To say something doesn't exist, the indefinite pronoun plus a negative form of `be` is used:
+
+```
+home-GEN inside-P2/3S-TOP some CL.human-NOM be-NEG-S2/3S
+There's no one in the house.
+```
+
+### Relative clauses
+
+Relative clauses are expressed without a complementizer or relative pronoun;
+some verb and its arguments simply branch leftward from the head noun, with the role of the
+coreferent in the subclause being understood from gapping and context.
+
+```
+see-PST-S1S man
+the man I saw
+```
+
+```
+2S.formal-NOM ALL-P1S give-PST-S2/3S cup
+the cup you gave me
+```
+
+The non-past suffix is dropped for the main verb of a relative clause:
+
+The non-past suffix is dropped for the main verb of a relative clause:
+
+```
+travel-S2/3S man
+traveling man
+```
+
+```
+small-S2/3S home
+small house
+```
+
+However, subject person marking is still included:
+
+```
+small-SP home-PL
+small houses
 ```
 
 ### Questions
