@@ -61,6 +61,10 @@ func glossedSentence(s string, translation string) string {
 		glossLine += fmt.Sprintf("%-*s", maxLen+1, glosses)
 	}
 
+	wordsLine = strings.TrimSpace(wordsLine)
+	morphemesLine = strings.TrimSpace(morphemesLine)
+	glossLine = strings.TrimSpace(glossLine)
+
 	return fmt.Sprintf("```\n%s\n%s\n%s\n%q\n```", wordsLine, morphemesLine, glossLine, translation)
 }
 
