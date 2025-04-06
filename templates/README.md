@@ -72,17 +72,17 @@ The full set of correspondences is:
 ## Epenthetic vowels
 
 The vowel *I* is inserted between a stem and suffix if needed to preserve phonotactics. Compare
-*iuve* "birch tree" + *-t* partitive suffix -> *iuvet*, but
-*eyokat* "magpie" + *-t* partitive suffix -> *eyokatet*.
+`birch` "birch tree" + *-t* partitive suffix -> `birch-PAR`, but
+`magpie` "magpie" + *-t* partitive suffix -> `magpie-PAR`.
 
 ## Epenthetic glides
 
 If a stem ending in a short vowel receives a suffix beginning with a short vowel, the two coalesce into a long vowel or diphthong, e.g.
-*iuve* "birch tree" + *-I* plural suffix -> *iuvei* "birch trees".
+`birch` "birch tree" + *-I* plural suffix -> `birch-PL` "birch trees".
 
 However, three vowel moras cannot occur in a row, so to prevent this, an epenthetic /ʋ/ (following a back vowel) or /j/ (otherwise) is inserted between
 the stem and the suffix, e.g.
-*iuvei* "birch trees" + *-A* genitive suffix -> *iuveiye* "of birch trees"
+`birch-PL` "birch trees" + *-A* genitive suffix -> `birch-PL-GEN` "of birch trees"
 
 ## Consonant sandhi
 
@@ -117,11 +117,11 @@ The full set of lone consonants and consonant sequences is
 
 Some examples of consonant lenition with the leniting genitive suffix *-A* include:
 
-*nappa* "stone" -> *nahaa* "of (the) stone"
+`stone` "stone" -> `stone-GEN` "of (the) stone"
 
-*senku* "river" -> *senguo* "of (the) river"
+`river` "river" -> `river-GEN` "of (the) river"
 
-*eyokat* "magpie" -> *eyokara* "of (the) magpie"
+`magpie` "magpie" -> `magpie-GEN` "of (the) magpie"
 
 # Grammar
 
@@ -134,9 +134,8 @@ It is also strictly suffixing, with suffixes stacking in an agglutinative fashio
 Sauna is generally pro-drop, with arbitrary arguments being permitted to be left out of the sentence when clear from context:
 
 ```
-tiuruoni yatos        
-home-ALL go-PST-S2/3S 
-"(He) went home."
+home-ALL go-PST-S2/3S
+(He) went home.
 ```
 
 Sauna verbs conjugate for subject, which is often enough to disambiguate, although conjugation only makes a three-way distinction
@@ -147,7 +146,7 @@ between first person singular, second or third person singular, and plural subje
 There are only two content parts of speech in Sauna, nouns and verbs.
 Words with adjectival meanings are usually verbs.
 However, some nouns have adjectival meaning; I call these "quality nouns".
-Quality nouns are often ideophonic, and often involve reduplication: *hirrivirri* "sneaky"
+Quality nouns are often ideophonic, and often involve reduplication: `sneaky` "sneaky"
 
 Other parts of speech include numerals, noun classifiers, and relational nouns, although
 noun classifiers and relational nouns are not entirely distinct from normal nouns.
@@ -160,23 +159,23 @@ Nouns are inflected for number, posessor, and case, with suffixes coming in that
 
 The plural suffix is *-I*
 
-*iuve* "birch tree" -> *iuvei* "birch trees"
+`birch` "birch tree" -> `birch-PL` "birch trees"
 
-*eyokat* "magpie" -> *eyokate* "magpies"
+`magpie` "magpie" -> `magpie-PL` "magpies"
 
-*nappa* "stone" -> *nappai* "stones"
+`stone` "stone" -> `stone-PL` "stones"
 
 ### Possessor
 
 Nouns are marked for their possessor:
 
-- The first person singular possessor suffix is *-n*: *tiurun* "my home"
+- The first person singular possessor suffix is *-n*: `home-P1S` "my home"
 
-- The second/third person singular possessor suffix is *-t*: *tiurut* "your home, his home, her home"
+- The second/third person singular possessor suffix is *-t*: `home-P2/3S` "your home, his home, her home"
 
-- The first person plural possessor suffix is *-mmIt*: *tiurummit* "our home"
+- The first person plural possessor suffix is *-mmIt*: `home-P1P` "our home"
 
-- The second/third person plural possessor suffix is *-vIt*: *tiuruvit* "y'all's home, their home"
+- The second/third person plural possessor suffix is *-vIt*: `home-P2/3P` "y'all's home, their home"
 
 ### Cases
 
@@ -192,45 +191,39 @@ The topic is marked with the topical case marker *-vA* and generally comes first
 The topic may have a variety of semantic roles in the sentence, including agent, patient, experiencer, location, or possessor of some other argument.
 
 ```
-kunive    tiuruoni yatos        
-woman-TOP home-ALL go-PST-S2/3S 
-"The woman went home."
+woman-TOP home-ALL go-PST-S2/3S
+The woman went home.
 ```
 
 ```
-eyokateva     ereku    narairo        
-magpie-PL-TOP tail-NOM long-NPT-S2/3S 
-"Magpies have long tails."
+magpie-PL-TOP tail-NOM long-NPT-S2/3S
+Magpies have long tails.
 ```
 
 The topic is often implied to be contrastive, especiialy when the its semantic role is something other than agent or patient.
 
 ```
-veirumme  iuvei        iyeruu       
-south-TOP birch-PL-NOM small-NPT-SP 
-"In the south, the birch trees are small."
+south-TOP birch-PL-NOM small-NPT-SP
+In the south, the birch trees are small.
 ```
 
 For roles other than agent, patient, location, or possessor, the topical case suffix may be stacked on top of another:
 
 ```
-tiuruonive   kuni      yatos        
-home-ALL-TOP woman-NOM go-PST-S2/3S 
-"Home is where the woman went."
+home-ALL-TOP woman-NOM go-PST-S2/3S
+Home is where the woman went.
 ```
 
 For some constructions, a particular argument must be the topic.
 
 ```
-eyokateva     ereku    naro         
-magpie-PL-TOP tail-NOM be-NPT-S2/3S 
-"Magpies have tails."
+magpie-PL-TOP tail-NOM be-NPT-S2/3S
+Magpies have tails.
 ```
 
 ```
-aremma        eyokate       tairou      
-1S.polite-TOP magpie-PL-NOM good-NPT-SP 
-"I like magpies."
+1S.polite-TOP magpie-PL-NOM good-NPT-SP
+I like magpies.
 ```
 
 #### Nominative
@@ -238,23 +231,20 @@ aremma        eyokate       tairou
 The nominative is used for agents and inanimate patients. It is unmarked.
 
 ```
-eyokappa   ora       etas          
-magpie-TOP acorn-NOM eat-PST-S2/3S 
-"The magpie ate an acorn."
+magpie-TOP acorn-NOM eat-PST-S2/3S
+The magpie ate an acorn.
 ```
 
 ```
-orava     eyokat     etas          
-acorn-TOP magpie-NOM eat-PST-S2/3S 
-"An acorn is what the magpie ate."
+acorn-TOP magpie-NOM eat-PST-S2/3S
+An acorn is what the magpie ate.
 ```
 
 As a general rule, if the agent and patient are both in the nominative case, the agent should come first.
 
 ```
-eyokat     ora       etas          
-magpie-NOM acorn-NOM eat-PST-S2/3S 
-"The magpie ate an acorn."
+magpie-NOM acorn-NOM eat-PST-S2/3S
+The magpie ate an acorn.
 ```
 
 #### Genitive
@@ -265,25 +255,22 @@ The first is to mark a noun as a possessor or modifier of another noun. Note tha
 a genitive modifier as well is generally not needed except to clarify third person possessors.
 
 ```
-kunie     tiurut     
-woman-GEN home-P2/3S 
-"the woman's home"
+woman-GEN home-P2/3S
+the woman's home
 ```
 
 A common type of modification other than possession is to use quality nouns attributively:
 
 ```
-hirrivirrie kuni  
-sneaky-GEN  woman 
-"sneaky woman"
+sneaky-GEN woman
+sneaky woman
 ```
 
 The second function is to mark animate patients.
 
 ```
-kunie     uhesin      
-woman-GEN see-PST-S1S 
-"I saw the woman."
+woman-GEN see-PST-S1S
+I saw the woman.
 ```
 
 For the purpose of direct object marking, animals may be marked with either the nominative (treating them as animate)
@@ -291,15 +278,13 @@ or the genitive (treating them as inanimate), depending on the degree of emotion
 to convey. This is similar to how it's possible to use either "it" or gendered pronouns with animals in English.
 
 ```
-eyokara    uhesin      
-magpie-GEN see-PST-S1S 
-"I saw the magpie."
+magpie-GEN see-PST-S1S
+I saw the magpie.
 ```
 
 ```
-eyokat     uhesin      
-magpie-NOM see-PST-S1S 
-"I saw the magpie."
+magpie-NOM see-PST-S1S
+I saw the magpie.
 ```
 
 #### Partitive
@@ -310,31 +295,27 @@ The first function is to mark a direct object where the verb was unsuccessful or
 The plurality of the partitive noun is ambiguous.
 
 ```
-eyokat     orat      etas          
-magpie-NOM acorn-PAR eat-PST-S2/3S 
-"The magpie ate some acorns."
+magpie-NOM acorn-PAR eat-PST-S2/3S
+The magpie ate some acorns.
 ```
 
 Contrast this with
 
 ```
-eyokat     ora       etas          
-magpie-NOM acorn-NOM eat-PST-S2/3S 
-"The magpie ate the acorn."
+magpie-NOM acorn-NOM eat-PST-S2/3S
+The magpie ate the acorn.
 ```
 
 ```
-eyokat     orai         etas          
-magpie-NOM acorn-PL-NOM eat-PST-S2/3S 
-"The magpie ate the acorns."
+magpie-NOM acorn-PL-NOM eat-PST-S2/3S
+The magpie ate the acorns.
 ```
 
 The second function is to adjoin the noun to a cardinal number.
 
 ```
-eyokatet   sone  tiri      
-magpie-PAR three CL.animal 
-"three magpies"
+magpie-PAR three CL.animal
+three magpies
 ```
 
 #### Equative
@@ -344,25 +325,22 @@ The equative case, marked with *-ssI* is used in two related ways.
 The first way is to mark the complement of a copula:
 
 ```
-kunissi   naron      
-woman-EQU be-NPT-S1S 
-"I am a woman."
+woman-EQU be-NPT-S1S
+I am a woman.
 ```
 
 The second way is to indicate manner or similarity:
 
 ```
-nappasse  kotarero       
-stone-EQU hard-NPT-S2/3S 
-"It is hard like a stone."
+stone-EQU hard-NPT-S2/3S
+It is hard like a stone.
 ```
 
 This includes using quality nouns adverbially:
 
 ```
-hirrivirrissi tiuruoni yatosen    
-sneaky-EQU    home-ALL go-PST-S1S 
-"I went home sneakily."
+sneaky-EQU home-ALL go-PST-S1S
+I went home sneakily.
 ```
 
 #### Dative
@@ -370,15 +348,13 @@ sneaky-EQU    home-ALL go-PST-S1S
 The dative case, marked with *-nyU*, is used to mark a benefactor or motive.
 
 ```
-kuninyu   tiuru    tatasen       
-woman-DAT home-NOM build-PST-S1S 
-"I built the woman a home."
+woman-DAT home-NOM build-PST-S1S
+I built the woman a home.
 ```
 
 ```
-nappat    veteanyo         senguoni  yatosen    
-stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S 
-"I went to the river to get stones."
+stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S
+I went to the river to get stones.
 ```
 
 #### Adpositional cases
@@ -389,33 +365,29 @@ These three are all marked with suffixes based on the genitive suffix, and so al
 The allative is marked with the genitive suffix plus *-nI*, and indicates motion towards.
 
 ```
-tiuruoni yatos        
-home-ALL go-PST-S2/3S 
-"He went home."
+home-ALL go-PST-S2/3S
+He went home.
 ```
 
 The allative is also used for recipients.
 
 ```
-eyokarane  ora       okosen       
-magpie-ALL acorn-NOM give-PST-S1S 
-"I gave the magpie an acorn."
+magpie-ALL acorn-NOM give-PST-S1S
+I gave the magpie an acorn.
 ```
 
 The locative is marked with the genitive suffix plus *-ttI*, and indicates location at.
 
 ```
-tiuruotti naro         
-home-LOC  be-NPT-S2/3S 
-"He is at home."
+home-LOC be-NPT-S2/3S
+He is at home.
 ```
 
 The ablative is marked with the genitive suffix plus *-stI*, and indicates motion away.
 
 ```
-tiuruosti yatos        
-home-ABL  go-PST-S2/3S 
-"He left home."
+home-ABL go-PST-S2/3S
+He left home.
 ```
 
 ### Relational nouns
@@ -423,73 +395,64 @@ home-ABL  go-PST-S2/3S
 There is a set of nouns which commonly appear as the possessum of other nouns, indicating a physical position or
 some other type of relationship.
 
-An example of such a noun is *mu* "inside":
+An example of such a noun is `inside` "inside":
 
 ```
-tiuruo   muretti          naro         
-home-GEN inside-P2/3S-LOC be-NPT-S2/3S 
-"He is inside the house."
+home-GEN inside-P2/3S-LOC be-NPT-S2/3S
+He is inside the house.
 ```
 
-Some such nouns conventionally only appear with a particular case, such as *ki*, which
+Some such nouns conventionally only appear with a particular case, such as `companion`, which
 may mean "companion," but which almost always appears in the equative case with a comitative meaning:
 
 ```
-kunive    kinissi           yatos        
-woman-TOP companion-P1S-EQU go-PST-S2/3S 
-"The woman went with me."
+woman-TOP companion-P1S-EQU go-PST-S2/3S
+The woman went with me.
 ```
 
-Other positional nouns don't require any case marking to be understood with an oblique meaning, such as *tuppe* "without":
+Other positional nouns don't require any case marking to be understood with an oblique meaning, such as `without` "without":
 
 ```
-tuppemmit   
-without-P1P 
-"without us"
+without-P1P
+without us
 ```
 
 #### Adpositional relationals
 
 The adpositional cases, being based on the genitive case, actually originate as relational nouns.
 The possession suffix has been dropped from the adpositional case suffixes, but the same roots can also function
-similarly to *tuppe* "without", as standalone relational with a possession suffix.
+similarly to `without` "without", as standalone relational with a possession suffix.
 This is preferred over putting first person pronouns in the adpositional cases, and permissible for second and third persons rather than
 using a pronoun if there is no risk of ambiguity, but may not be used with an actual noun possessor.
 
 ```
-*so       arenane       okote    
- that-NOM 1S.polite-ALL give-CNJ 
-"Give it to me."
+*that-NOM 1S.polite-ALL give-CNJ
+Give it to me.
 ```
 
 ```
-so       nin     okote    
-that-NOM ALL-P1S give-CNJ 
-"Give it to me."
+that-NOM ALL-P1S give-CNJ
+Give it to me.
 ```
 
 ```
-so       sieni         okoron       
-that-NOM 2S.formal-ALL give-NPT-S1S 
-"I'll give it to you."
+that-NOM 2S.formal-ALL give-NPT-S1S
+I'll give it to you.
 ```
 
 ```
-so       nit       okoron       
-that-NOM ALL-P2/3S give-NPT-S1S 
-"I'll give it to you/him/her."
+that-NOM ALL-P2/3S give-NPT-S1S
+I'll give it to you/him/her.
 ```
 
 ```
-so       kunieni   okoron       
-that-NOM woman-ALL give-NPT-S1S 
-"I'll give it to the woman"
+that-NOM woman-ALL give-NPT-S1S
+I'll give it to the woman
 ```
 
 ```
-*so       kunie     nit       okoron       
- that-NOM woman-GEN ALL-P2/3S give-NPT-S1S 
-"I'll give it to the woman"
+*that-NOM woman-GEN ALL-P2/3S give-NPT-S1S
+I'll give it to the woman
 ```
 
 ## Verbs
@@ -507,59 +470,51 @@ it takes the syntactic position and case marking that the agent would normally t
 For animate patients, this means that the case can shift from genitive to nominative:
 
 ```
-eyokara    uherun      
-magpie-GEN see-NPT-S1S 
-"I see the magpie."
+magpie-GEN see-NPT-S1S
+I see the magpie.
 ```
 
 ```
-eyokat     uhere         
-magpie-NOM see-PSV-S2/3S 
-"The magpie is seen."
+magpie-NOM see-PSV-S2/3S
+The magpie is seen.
 ```
 
 However, the patient might not change case, e.g. if it is marked as the topic,
 or if it is inanimate (inanimate nouns use the nominative case as both subject and object):
 
 ```
-eyokappa   uherun      
-magpie-TOP see-NPT-S1S 
-"I see the magpie."
+magpie-TOP see-NPT-S1S
+I see the magpie.
 ```
 
 ```
-eyokappa   uhere         
-magpie-TOP see-PSV-S2/3S 
-"The magpie is seen."
+magpie-TOP see-PSV-S2/3S
+The magpie is seen.
 ```
 
 ```
-ora       uherun      
-acorn-NOM see-NPT-S1S 
-"I see the acorn."
+acorn-NOM see-NPT-S1S
+I see the acorn.
 ```
 
 ```
-ora       uhere         
-acorn-NOM see-PSV-S2/3S 
-"The acorn is seen."
+acorn-NOM see-PSV-S2/3S
+The acorn is seen.
 ```
 
 The same affix may be used with a potential sense.
 This still entails promoting the object to subject; there may be ambiguity between the potential and plain passive.
 
 ```
-eyokat     uhere         
-magpie-NOM see-PSV-S2/3S 
-"The magpie is seen/visible."
+magpie-NOM see-PSV-S2/3S
+The magpie is seen/visible.
 ```
 
 However, in the potential sense, an agent may be stated; if so, it is the topic, and the verb is still conjugated for the patient.
 
 ```
-aremma        eyokat     uhere         
-1S.polite-TOP magpie-NOM see-PSV-S2/3S 
-"I can see the magpie."
+1S.polite-TOP magpie-NOM see-PSV-S2/3S
+I can see the magpie.
 ```
 
 #### Causative
@@ -567,9 +522,8 @@ aremma        eyokat     uhere
 The causative, marked with *-sA*, is used to convey forcing or enabling someone or something to do something. The causee is marked with the dative case.
 
 ```
-kuninyu   tiuruoni yatosasen      
-woman-DAT home-ALL go-CAU-PST-S1S 
-"I made the woman go home."
+woman-DAT home-ALL go-CAU-PST-S1S
+I made the woman go home.
 ```
 
 ### Negation
@@ -577,15 +531,13 @@ woman-DAT home-ALL go-CAU-PST-S1S
 Verbs are negated with the suffix *-nA*.
 
 ```
-so       etanasen        
-that-NOM eat-NEG-PST-S1S 
-"I didn't eat it."
+that-NOM eat-NEG-PST-S1S
+I didn't eat it.
 ```
 
 ```
-eyokat     uherene           
-magpie-NOM see-PSV-NEG-S2/3S 
-"The magpie is not visible."
+magpie-NOM see-PSV-NEG-S2/3S
+The magpie is not visible.
 ```
 
 ### Tense
@@ -597,18 +549,16 @@ Verbs can be marked for past or non-past tense.
 The non-past is versatile in use, being usable for simple present, gnomic, and future senses.
 
 ```
-eyokappa   orat      etaro         
-magpie-TOP acorn-PAR eat-NPT-S2/3S 
-"The magpie eats acorns./The magpie is eating acorns./The magpie will eat acorns."
+magpie-TOP acorn-PAR eat-NPT-S2/3S
+The magpie eats acorns./The magpie is eating acorns./The magpie will eat acorns.
 ```
 
 The explicit non-past suffix is *-rU*. However, it is only used if there are no preceding suffixes, i.e., no voice or negation marking.
 If there are voice or negation suffixes applied, the non-past is zero-marked.
 
 ```
-eyokappa   orat      etana         
-magpie-TOP acorn-PAR eat-NEG-S2/3S 
-"The magpie doesn't eat acorns./The magpie isn't eating acorns./The magpie won't eat acorns."
+magpie-TOP acorn-PAR eat-NEG-S2/3S
+The magpie doesn't eat acorns./The magpie isn't eating acorns./The magpie won't eat acorns.
 ```
 
 #### Past
@@ -616,9 +566,8 @@ magpie-TOP acorn-PAR eat-NEG-S2/3S
 The past tense is marked with *-s*.
 
 ```
-eyokappa   orat      etas          
-magpie-TOP acorn-PAR eat-PST-S2/3S 
-"The magpie ate acorns."
+magpie-TOP acorn-PAR eat-PST-S2/3S
+The magpie ate acorns.
 ```
 
 ### Subject agreement
@@ -628,11 +577,11 @@ including passives and verbs with adjectival meanings.
 
 There is only a three-way distinction made in verb conjugation:
 
-- first person singular is marked *-n*: *naron* "I am", *nasen* "I was"
+- first person singular is marked *-n*: `be-NPT-S1S` "I am", `be-PST-S1S` "I was"
 
-- second and third person singular are unmarked: *naro* "you are/he, she is", *nas* "you were/he, she was"
+- second and third person singular are unmarked: `be-NPT-S2/3S` "you are/he, she is", `be-PST-S2/3S` "you were/he, she was"
 
-- plural subjects are all marked alike, by lengthening a final vowel if the stem ends in a short vowel, and zero-marking otherwise: *narou* "they are", *nas* "they were"
+- plural subjects are all marked alike, by lengthening a final vowel if the stem ends in a short vowel, and zero-marking otherwise: `be-NPT-SP` "they are", `be-PST-SP` "they were"
 
 ### Conjunctive form
 
@@ -640,23 +589,20 @@ The conjunctive is non-finite form of verbs which replaces tense and person mark
 Its core function is as a converb, to convey simultaneous or sequential action by the same subject:
 
 ```
-yuruti   tiuruoni yatosen    
-sing-CNJ home-ALL go-PST-S1S 
-"I sang as I went home."
+sing-CNJ home-ALL go-PST-S1S
+I sang as I went home.
 ```
 
 ```
-nappat    vette    tiuru    tatasen       
-stone-PAR take-CNJ home-NOM build-PST-S1S 
-"I got some rocks and built a house."
+stone-PAR take-CNJ home-NOM build-PST-S1S
+I got some rocks and built a house.
 ```
 
-As an extension of this, it is used with *na* "be" to convey a progressive aspect:
+As an extension of this, it is used with `be` "be" to convey a progressive aspect:
 
 ```
-etate   naron      
-eat-CNJ be-NPT-S1S 
-"I'm eating."
+eat-CNJ be-NPT-S1S
+I'm eating.
 ```
 
 #### Nominalization
@@ -665,17 +611,15 @@ Verbs can be turned into nouns, which can either refer to a single instance of p
 by adding the conjunctive suffix and the genitive case suffix. Other case suffixes then stack on top of the genitive suffix.
 
 ```
-aremma        etarea          tairo          
-1S.polite-TOP eat-CNJ-GEN-NOM good-NPT-S2/3S 
-"I like eating."
+1S.polite-TOP eat-CNJ-GEN-NOM good-NPT-S2/3S
+I like eating.
 ```
 
 Arguments of the nominalized verb can branch leftward from the verb:
 
 ```
-nappat    veteanyo         senguoni  yatosen    
-stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S 
-"I went to the river to get stones."
+stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S
+I went to the river to get stones.
 ```
 
 ## Numerals
@@ -684,106 +628,100 @@ stone-PAR take-CNJ-GEN-DAT river-ALL go-PST-S1S
 
 Sauna's numerals are largely base ten, with multiples of ten up to one hundred grouped into twenties.
 
-*u* "one"
+`one` "one"
 
-*iri* "two"
+`two` "two"
 
-*sone* "three"
+`three` "three"
 
-*neye* "four"
+`four` "four"
 
-*tuise* "five"
+`five` "five"
 
-*tite* "six"
+`six` "six"
 
-*viki* "seven"
+`seven` "seven"
 
-*kiki* "eight"
+`eight` "eight"
 
-*une* "nine"
+`nine` "nine"
 
-*hesko* "ten"
+`ten` "ten"
 
-*hesko u* "eleven"
+`ten one` "eleven"
 
-*hesko iri* "twelve"
+`ten two` "twelve"
 
-*take* "twenty"
+`twenty` "twenty"
 
-*take hesko* "thirty"
+`twenty ten` "thirty"
 
-*iri take* "forty"
+`two twenty` "forty"
 
-*iri take hesko* "fifty"
+`two twenty ten` "fifty"
 
-*teisis* "hundred"
+`hundred` "hundred"
 
-*ot* "thousand"
+`thousand` "thousand"
 
-*kairau* "ten thousand"
+`myriad` "ten thousand"
 
-*sone kairau tite ot tuise teisis neye take hesko kiki* "36,598"
+`three myriad six thousand five hundred four twenty ten eight` "36,598"
 
 ### Cardinal numbers and numeral classifiers
 
 Sauna uses numeral classifiers with cardinal numbers:
 
 ```
-eyokatet   sone  tiri      
-magpie-PAR three CL.animal 
-"three magpies"
+magpie-PAR three CL.animal
+three magpies
 ```
 
 The classifiers are effectively nouns. They take the case marking for the phrase:
 
 ```
-eyokatet   sone  tirinyu       
-magpie-PAR three CL.animal-DAT 
-"for three magpies"
+magpie-PAR three CL.animal-DAT
+for three magpies
 ```
 
 Some nouns can even double as numeral classifiers:
 
 ```
-kiitet  sone  te         
-cup-PAR three CL.general 
-"three cups"
+cup-PAR three CL.general
+three cups
 ```
 
 ```
-vetat     sone  kiite 
-water-PAR three cup   
-"three cups of water"
+water-PAR three cup
+three cups of water
 ```
 
 Some common classifiers include:
 
-- *te* can be used for any inanimate noun
+- `CL.general` can be used for any inanimate noun
 
-- *na* people, or anthropomorphized characters or deities
+- `CL.human` people, or anthropomorphized characters or deities
 
-- *tiri* birds and small to medium-sized mammals
+- `CL.animal` birds and small to medium-sized mammals
 
-- *kui* small hard objects such as acorns, grains, beads, coins
+- `CL.small.object` small hard objects such as acorns, grains, beads, coins
 
-- *hise* pieces of a larger whole
+- `CL.piece` pieces of a larger whole
 
 ### Ordinal numbers
 
 To make numbers ordinal, they should appear as a modifier of the noun in the genitive:
 
 ```
-sonea     eyokat 
-three-GEN magpie 
-"the third magpie"
+three-GEN magpie
+the third magpie
 ```
 
-"First" is irregular, being based on the word *ensoi* "beginning":
+"First" is irregular, being based on the word `beginning` "beginning":
 
 ```
-ensoiya       eyokat 
-beginning-GEN magpie 
-"the first magpie"
+beginning-GEN magpie
+the first magpie
 ```
 
 ## Pronouns
@@ -799,114 +737,105 @@ and the first person may be obvious from context in requests etc.
 
 If an explicit first person pronoun is given, there are three main choices:
 
-- *aren* is the standard first person pronoun, used in formal and some casual situations
+- `1S.polite` is the standard first person pronoun, used in formal and some casual situations
 
-- *oura* is used by masculine people in most casual situations
+- `1S.masc` is used by masculine people in most casual situations
 
-- *saye* sounds diminutive and may be used by feminine people casually, though it's not unusual for feminine people to use *aren* in some casual situations or even avoid *saye* consistently
+- `1S.fem` sounds diminutive and may be used by feminine people casually, though it's not unusual for feminine people to use `1S.polite` in some casual situations or even avoid `1S.fem` consistently
 
 #### Second person singular
 
 It's common for names or nicknames to be used instead of second person pronouns. Second person pronouns are used in the following situations:
 
-- *si* is used when the other person's name is not known, such as when addressing a stranger or in writing or media addressing a generic reader/listener
+- `2S.formal` is used when the other person's name is not known, such as when addressing a stranger or in writing or media addressing a generic reader/listener
 
-- *akara* is used to address someone of significantly higher status
+- `2S.hon` is used to address someone of significantly higher status
 
-- *varaa* may be used by a masculine speaker to a masculine listener, sounding somewhat rough or uncouth
+- `2S.masc` may be used by a masculine speaker to a masculine listener, sounding somewhat rough or uncouth
 
 #### Third person singular
 
 It's almost universal to use names when talking about single other people.
 The only exception is when talking about someone whose name is not known, in which case
-*so na* or *no na* "that person" can be used.
+`that CL.human` or `yon CL.human` "that person" can be used.
 
 #### Plural pronouns
 
 Plural pronouns are standard and always used rather than names or some other manner of description.
 
-*nai* is the exclusive first person plural pronoun ("we" excluding the listener).
+`1P.EXCL` is the exclusive first person plural pronoun ("we" excluding the listener).
 
-*kii* is the inclusive equivalent ("we" including the listener).
+`1P.INCL` is the inclusive equivalent ("we" including the listener).
 
-*ti* is the second person plural pronoun.
+`2P` is the second person plural pronoun.
 
-*ni* is the third person plural pronoun.
+`3P` is the third person plural pronoun.
 
 ### Demonstrative pronouns
 
 Sauna has three levels of distance for demonstratives:
 
-- *ko* is proximal ("this")
+- `this` is proximal ("this")
 
-- *so* is medial ("that by you, that nearby")
+- `that` is medial ("that by you, that nearby")
 
-- *no* is distal ("that over there, yon")
+- `yon` is distal ("that over there, yon")
 
-There is also an indefinite pronoun *to* which by itself means "some, any" and is also used to form negative existentials and questions.
+There is also an indefinite pronoun `some` which by itself means "some, any" and is also used to form negative existentials and questions.
 
 Demonstrative pronouns have similar syntax to numerals. They can appear by themselves:
 
 ```
-so       vetesen      
-that-NOM take-PST-S1S 
-"I took it."
+that-NOM take-PST-S1S
+I took it.
 ```
 
 or directly with classifiers:
 
 ```
-so   te             vetesen      
-that CL.general-NOM take-PST-S1S 
-"I took that thing."
+that CL.general-NOM take-PST-S1S
+I took that thing.
 ```
 
 ```
-no  naa          uhesin      
-yon CL.human-GEN see-PST-S1S 
-"I saw that person."
+yon CL.human-GEN see-PST-S1S
+I saw that person.
 ```
 
 To be attributive, demonstratives are marked with the genitive:
 
 ```
-noa     eyokara    uhesin      
-yon-GEN magpie-GEN see-PST-S1S 
-"I saw that magpie."
+yon-GEN magpie-GEN see-PST-S1S
+I saw that magpie.
 ```
 
 Demonstratives by themselves can mean "here" and "there" using the adpositional cases:
 
 ```
-noane   yatoron    
-yon-ALL go-NPT-S1S 
-"I'm going there."
+yon-ALL go-NPT-S1S
+I'm going there.
 ```
 
 ```
-tiurun       koatte   naro         
-home-P1S-NOM this-LOC be-NPT-S2/3S 
-"My house is here."
+home-P1S-NOM this-LOC be-NPT-S2/3S
+My house is here.
 ```
 
 To retain the sense of a location, they must use the locative case as a topic, even though locations otherwise can be topic without overt locative marking:
 
 ```
-tiuruve  kuni      naro         
-home-TOP woman-NOM be-NPT-S2/3S 
-"There's a woman in the house."
+home-TOP woman-NOM be-NPT-S2/3S
+There's a woman in the house.
 ```
 
 ```
-noatteva    kuni      naro         
-yon-LOC-TOP woman-NOM be-NPT-S2/3S 
-"There's a woman over there."
+yon-LOC-TOP woman-NOM be-NPT-S2/3S
+There's a woman over there.
 ```
 
 ```
-*nova    kuni      naro         
- yon-TOP woman-NOM be-NPT-S2/3S 
-"There's a woman over there."
+*yon-TOP woman-NOM be-NPT-S2/3S
+There's a woman over there.
 ```
 
 ## Syntax
@@ -917,50 +846,44 @@ The order of a Sauna clause is generally topic, subject (if it is distinct), obl
 However, case marking makes this somewhat flexible; the only rigid rule is that the verb must come last.
 
 ```
-kohava    kuni      eyokarane  orat      okos           
-today-TOP woman-NOM magpie-ALL acorn-PAR give-PST-S2/3S 
-"Today the woman gave the magpie acorns."
+today-TOP woman-NOM magpie-ALL acorn-PAR give-PST-S2/3S
+Today the woman gave the magpie acorns.
 ```
 
 If there are multiple predicates due to the use of the conjunctive verb form, their obliques and direct object are ordered
 the same way before each respective verb:
 
 ```
-veta      neteti    tiuru    tatasen       
-water-NOM drink-CNJ home-NOM build-PST-S1S 
-"I drank water as I built the house."
+water-NOM drink-CNJ home-NOM build-PST-S1S
+I drank water as I built the house.
 ```
 
 ### Existentials, to have, to be
 
-The verb *na* essentially means "to exist".
+The verb `be` essentially means "to exist".
 
 ```
-noatteva    eyokat     naro         
-yon-LOC-TOP magpie-NOM be-NPT-S2/3S 
-"There's a magpie over there."
+yon-LOC-TOP magpie-NOM be-NPT-S2/3S
+There's a magpie over there.
 ```
 
 With a topic, it can be used to mean "have":
 
 ```
-aremma        tiuru    naro         
-1S.polite-TOP home-NOM be-NPT-S2/3S 
-"I have a house."
+1S.polite-TOP home-NOM be-NPT-S2/3S
+I have a house.
 ```
 
 To equate two nouns, the equative case is used:
 
 ```
-kunissi   naron      
-woman-EQU be-NPT-S1S 
-"I am a woman."
+woman-EQU be-NPT-S1S
+I am a woman.
 ```
 
 ```
-so       tiurussi naro         
-that-NOM home-EQU be-NPT-S2/3S 
-"It is a house."
+that-NOM home-EQU be-NPT-S2/3S
+It is a house.
 ```
 
 ### Questions
@@ -970,45 +893,39 @@ Sauna uses an interrogative suffix *-kU* which attaches to some element of the s
 For polar questions, this is generally the verb:
 
 ```
-noane   yatosko          
-yon-ALL go-PST-S2/3S-INT 
-"Did you go there?"
+yon-ALL go-PST-S2/3S-INT
+Did you go there?
 ```
 
 although the interrogative particle can go on another element to specifically make it the contrastive focus of the question:
 
 ```
-noaneko     yatos        
-yon-ALL-INT go-PST-S2/3S 
-"Is that where you went?"
+yon-ALL-INT go-PST-S2/3S
+Is that where you went?
 ```
 
 For content questions, the interrogative particle is placed onto a noun phrase with the indefinite demonstrative.
 
 ```
-toaneko      yatos        
-some-ALL-INT go-PST-S2/3S 
-"Where did you go?"
+some-ALL-INT go-PST-S2/3S
+Where did you go?
 ```
 
 ```
-toko         etas          
-some-NOM-INT eat-PST-S2/3S 
-"What did you eat?"
+some-NOM-INT eat-PST-S2/3S
+What did you eat?
 ```
 
 ```
-sive          toa      kiiteku     tairo          
-2S.formal-TOP some-GEN cup-NOM-INT good-NPT-S2/3S 
-"Which cup do you like?"
+2S.formal-TOP some-GEN cup-NOM-INT good-NPT-S2/3S
+Which cup do you like?
 ```
 
 Combining the indefinite with classifiers is a productive way to more specifically ask "what", "which", or "who"?
 
 ```
-sive          to   naako            tairo          
-2S.formal-TOP some CL.human-GEN-INT good-NPT-S2/3S 
-"Who do you like?"
+2S.formal-TOP some CL.human-GEN-INT good-NPT-S2/3S
+Who do you like?
 ```
 
 ### Imperatives and cohortatives
@@ -1016,35 +933,31 @@ sive          to   naako            tairo
 Sauna imperatives are formed by using the bare verb stem:
 
 ```
-nin     oko  
-ALL-P1S give 
-"Give it to me."
+ALL-P1S give
+Give it to me.
 ```
 
-This can sound rather blunt. There is a verb *ketaikoa* which is specifically used act as a softer imperative,
+This can sound rather blunt. There is a verb `do.please` which is specifically used act as a softer imperative,
 with the actual verb being requested coming before in conjunctive form:
 
 ```
-nin     okote    ketaikoa  
-ALL-P1S give-CNJ do.please 
-"Please give it to me."
+ALL-P1S give-CNJ do.please
+Please give it to me.
 ```
 
 This can actually be overly formal and polite. The most neutral way to pose a request, neither blunt and urgent nor overly formal,
-is to omit *ketaikoa* and leave the bare conjunctive.
+is to omit `do.please` and leave the bare conjunctive.
 
 ```
-nin     okote    
-ALL-P1S give-CNJ 
-"Give it to me."
+ALL-P1S give-CNJ
+Give it to me.
 ```
 
 The normal way to express a cohortative is with the non-past tense, plural conjugation plus interrogative particle.
 Note that this literally just asks about a group, but the implication can be cohortative if it makes sense contextually:
 
 ```
-yatorouko     
-go-NPT-SP-INT 
-"Are they going?/Are we going?/Let's go!"
+go-NPT-SP-INT
+Are they going?/Are we going?/Let's go!
 ```
 
