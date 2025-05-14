@@ -104,6 +104,48 @@ func renderList(n *ast.List, source []byte, indent int) []byte {
 	return out
 }
 
+func parseCodeblock(block *ast.FencedCodeBlock, source []byte) (string, string) {
+	lines := block.Lines()
+	l0, l1 := lines.At(0), lines.At(1)
+	outline := strings.TrimSuffix(string(source[l0.Start:l0.Stop]), "\n")
+	translation := strings.TrimSuffix(string(source[l1.Start:l1.Stop]), "\n")
+
+	return outline, translation
+}
+
+type GlossedSentence struct {
+	words       []gloss.GlossedWord
+	translation string
+}
+
+func allCodeblocks(document *ast.Document, source []byte) (bool, []GlossedSentence) {
+	var out []GlossedSentence
+
+	isAllCodeblocks := true
+	applyToChildren(document, func(child ast.Node) {
+		if !isAllCodeblocks {
+			return
+		}
+
+		if p, ok := child.(*ast.FencedCodeBlock); ok {
+			outline, translation := parseCodeblock(p, source)
+			words, err := gloss.ParseGloss(outline)
+			if err != nil {
+				panic(err)
+			}
+			out = append(out, GlossedSentence{words, translation})
+		} else {
+			isAllCodeblocks = false
+		}
+	})
+
+	if !isAllCodeblocks {
+		return false, nil
+	}
+
+	return true, out
+}
+
 func RenderAsMarkdown(n ast.Node, source []byte) []byte {
 	var out []byte
 
@@ -171,15 +213,59 @@ func RenderAsMarkdown(n ast.Node, source []byte) []byte {
 		out = append(out, []byte(gloss.Text(words))...)
 		out = append(out, '*')
 	case *ast.FencedCodeBlock:
-		lines := p.Lines()
-		l0, l1 := lines.At(0), lines.At(1)
-		outline := strings.TrimSuffix(string(source[l0.Start:l0.Stop]), "\n")
-		translation := strings.TrimSuffix(string(source[l1.Start:l1.Stop]), "\n")
-
+		outline, translation := parseCodeblock(p, source)
 		out = append(out, []byte(glossedSentence(outline, translation)+"\n\n")...)
 	default:
 		panic(fmt.Errorf("unknown node kind: %q", p.Kind().String()))
 	}
+
+	return out
+}
+
+func title(s string) string {
+	return strings.ToUpper(s[0:1]) + s[1:]
+}
+
+func RenderDocument(document *ast.Document, source []byte) []byte {
+	var out []byte
+
+	isAllCodeblocks, sentences := allCodeblocks(document, source)
+	if isAllCodeblocks {
+		for i, sentence := range sentences {
+			if i > 0 {
+				out = append(out, []byte("・")...)
+			}
+			for _, word := range sentence.words {
+				out = append(out, []byte(word.Kana)...)
+			}
+		}
+		out = append(out, []byte("\n\n*")...)
+		for i, sentence := range sentences {
+			if i > 0 {
+				out = append(out, ' ')
+			}
+			for j, word := range sentence.words {
+				if j == 0 {
+					out = append(out, []byte(title(word.Word.Romanization()))...)
+				} else {
+					out = append(out, ' ')
+					out = append(out, []byte(word.Word.Romanization())...)
+				}
+			}
+			out = append(out, '.')
+
+		}
+		out = append(out, []byte("*\n\n")...)
+		for i, sentence := range sentences {
+			if i > 0 {
+				out = append(out, ' ')
+			}
+			out = append(out, []byte(sentence.translation)...)
+		}
+		out = append(out, []byte("\n\n")...)
+	}
+
+	out = append(out, RenderAsMarkdown(document, source)...)
 
 	return out
 }
@@ -196,6 +282,6 @@ func GenerateDocs() {
 		p := goldmark.DefaultParser()
 		n := p.Parse(reader)
 
-		os.WriteFile(fmt.Sprintf("%s.md", filename), []byte(RenderAsMarkdown(n, source)), 0)
+		os.WriteFile(fmt.Sprintf("%s.md", filename), []byte(RenderDocument(n.(*ast.Document), source)), 0)
 	}
 }

@@ -1,3 +1,9 @@
+ワオナイアミダアキチスシタハワトナコエスチホエチヂエンヨエケツリチス・ソアスチワテツヰンアスカンネテンタンガイヱレケドエニヤトス・ニヱアスカンノーヰセチケスニナエスチホエチナスシイヨラヂアツチオサヤナス・ソアスチワワオナイアミタナタナタスシホース・イラヒワオナイアミタワトスシナタナタスシホーヤミアツチタンガイヱレソスシトンヤラスシアスカンオワンキス・イスニツヱワオナイアミタア𛄠オス・ソアスチワタハセシチハチス・タンガイヱレヘチアスカンノーヰス・コサヤワワオナイアミタタバアエスチホエチナスシイヨサラス
+
+*Vaunaiya meraa kitissi tahava to nako esti huotirienyu ekerritis. Soasteva teppin askan neten tangai vere keruoni yatos. Nive askan nuuviseti kerni na esti huoti nasse eyorareatte u saya nas. Soasteva vaunaiya meta natanatasse huus. Erahe vaunaiya metava tosse natanatasse huu yameatte tangai vere sosse tonyarasse askan ovankes. Irnippe vaunaiya meta ayeus. Soasteva taha sesiti hates. Tangai vere heti askan nuuvis. Ko sayava vaunaiya meta tavaa esti huoti nasse eyosaras.*
+
+The North Wind and the Sun were disputing about who was stronger. Then a traveling man wearing a warm cloth came by. They agreed that the one who succeeded in making the traveler remove the cloak should be called stronger. Then the North Wind blew as hard as possible. But the harder the North Wind blew, the more tightly the traveling man wrapped his cloth. In the end, the North Wind gave up. Then the Sun shone warmly The traveling man immediately removed his cloth. In this way, the North Wind had to call the Sun the stronger one.
+
 ```
 ワオナイアミダアキチスシタハワトナコエスチホエチヂエンヨエケツリチス
 vaunaiya   meraa    kitissi             tahava   to   nako               esti huotirienyu        ekerritis
