@@ -2,6 +2,8 @@
 
 Sauna is a constructed language inspired by Finnish and Old Japanese.
 
+This document contains archaic kana ヰ ヱ 𛄠 𛄡 which may not render properly.
+
 # Phonology
 
 ## Consonants
