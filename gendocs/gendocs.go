@@ -13,6 +13,22 @@ import (
 	"github.com/cstuartroe/sauna/gloss"
 )
 
+func runeLength(s string) int {
+	return len([]rune(s))
+}
+
+func maxRuneLength(ss ...string) int {
+	out := 0
+	for _, s := range ss {
+		out = max(out, runeLength(s))
+	}
+	return out
+}
+
+func pad(s string, length int) string {
+	return s + strings.Repeat(" ", length-runeLength(s))
+}
+
 func glossedSentence(s string, translation string) string {
 	wrong := false
 	if s[0] == '*' {
@@ -44,17 +60,17 @@ func glossedSentence(s string, translation string) string {
 		glosses := ""
 
 		for _, gw := range words[i].Pieces {
-			maxLen := max(len(gw.Form), len(gw.Gloss))
-			morphemes += fmt.Sprintf("%-*s", maxLen, gw.Form)
-			glosses += fmt.Sprintf("%-*s", maxLen, gw.Gloss)
+			maxLen := maxRuneLength(gw.Form, gw.Gloss)
+			morphemes += pad(gw.Form, maxLen)
+			glosses += pad(gw.Gloss, maxLen)
 		}
 
-		maxLen := max(len(rom), len(morphemes))
+		maxLen := maxRuneLength(rom, morphemes, glosses)
 
-		kanaLine += kana
-		wordsLine += fmt.Sprintf("%-*s", maxLen+1, rom)
-		morphemesLine += fmt.Sprintf("%-*s", maxLen+1, morphemes)
-		glossLine += fmt.Sprintf("%-*s", maxLen+1, glosses)
+		kanaLine += kana + "  "
+		wordsLine += pad(rom, maxLen+1)
+		morphemesLine += pad(morphemes, maxLen+1)
+		glossLine += pad(glosses, maxLen+1)
 	}
 
 	wordsLine = strings.TrimSpace(wordsLine)
