@@ -2,7 +2,7 @@
 
 *Vaunaiya meraa kitissi tahava to nako esti huotirienyu ekerritis. Soasteva teppin askan neten tangai vere keruoni yatos. Nive askan nuuviseti kerni na esti huoti nasse eyorareatte u saya nas. Soasteva vaunaiya meta natanatasse huus. Erahe vaunaiya metava tosse natanatasse huu yameatte tangai vere sosse tonyarasse askan ovankes. Irnippe vaunaiya meta ayeus. Soasteva taha sesiti hates. Tangai vere heti askan nuuvis. Ko sayava vaunaiya meta tavaa esti huoti nasse eyosaras.*
 
-The North Wind and the Sun were disputing about who was stronger. Then a traveling man wearing a warm cloth came by. They agreed that the one who succeeded in making the traveler remove the cloak should be called stronger. Then the North Wind blew as hard as possible. But the harder the North Wind blew, the more tightly the traveling man wrapped his cloth. In the end, the North Wind gave up. Then the Sun shone warmly The traveling man immediately removed his cloth. In this way, the North Wind had to call the Sun the stronger one.
+The North Wind and the Sun were disputing about who was stronger. Then a traveling man wearing a warm cloth came by. They agreed that the one who succeeded in making the traveler remove the cloak should be called stronger. Then the North Wind blew as hard as possible. But the harder the North Wind blew, the more tightly the traveling man wrapped his cloth. In the end, the North Wind gave up. Then the Sun shone warmly. The traveling man immediately removed his cloth. In this way, the North Wind had to call the Sun the stronger one.
 
 ```
 ワオナイア  ミダア  キチスシ  タハワ  ト  ナコ  エスチ  ホエチヂエンヨ  エケツリチス  
@@ -57,7 +57,7 @@ ending-P2/3S-TOP north -GEN wind-NOM abate-PST-S2/3S
 soasteva       taha     sesiti   hates
 so  -'AstI-vA  taha-∅   sesi-tI  hate -s  -∅
 that-ABL  -TOP sun -NOM hot -CNJ shine-PST-S2/3S
-"Then the Sun shone warmly"
+"Then the Sun shone warmly."
 ```
 
 ```

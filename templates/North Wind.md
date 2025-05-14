@@ -30,7 +30,7 @@ In the end, the North Wind gave up.
 
 ```
 that-ABL-TOP sun-NOM hot-CNJ shine-PST-S2/3S
-Then the Sun shone warmly
+Then the Sun shone warmly.
 ```
 
 ```
