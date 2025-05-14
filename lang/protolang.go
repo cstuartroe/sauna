@@ -9,13 +9,13 @@ type ProtoSyllable struct {
 	Coda     MannerOfArticulation
 }
 
-type ProtoWord struct {
+type ProtoForm struct {
 	atr       bool
 	syllables []ProtoSyllable
 }
 
-func NewProtoWord(atr bool, syllables []ProtoSyllable) (ProtoWord, error) {
-	word := ProtoWord{
+func NewProtoStem(atr bool, syllables []ProtoSyllable) (ProtoForm, error) {
+	stem := ProtoForm{
 		atr:       atr,
 		syllables: syllables,
 	}
@@ -39,7 +39,7 @@ func NewProtoWord(atr bool, syllables []ProtoSyllable) (ProtoWord, error) {
 		}
 	}
 
-	return word, err
+	return stem, err
 }
 
 func surfaceProtoVowel(frontness VowelFrontness, atr bool) Vowel {
@@ -92,7 +92,7 @@ func lenite(syll ProtoSyllable, onset Consonant) (MannerOfArticulation, Consonan
 		case T:
 			return Nasal, N
 		case K:
-			return Nasal, Consonant{Velar, Nasal}
+			return Nasal, NG
 		}
 	case Stop:
 		switch onset {
@@ -108,7 +108,7 @@ func lenite(syll ProtoSyllable, onset Consonant) (MannerOfArticulation, Consonan
 	return syll.Coda, onset
 }
 
-func (w ProtoWord) Romanization() string {
+func (w ProtoForm) Romanization() string {
 	s := ""
 	for _, syllable := range w.syllables {
 		s += syllable.Onset.IPA()

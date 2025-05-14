@@ -13,14 +13,6 @@ import (
 	"github.com/cstuartroe/sauna/gloss"
 )
 
-func gl(s string) string {
-	words, err := gloss.ParseGloss(s)
-	if err != nil {
-		panic(err)
-	}
-	return gloss.Text(words)
-}
-
 func glossedSentence(s string, translation string) string {
 	wrong := false
 	if s[0] == '*' {
@@ -33,17 +25,20 @@ func glossedSentence(s string, translation string) string {
 		panic(err)
 	}
 
+	kanaLine := ""
 	wordsLine := ""
 	morphemesLine := ""
 	glossLine := ""
 
 	if wrong {
+		kanaLine += "*"
 		wordsLine += "*"
 		morphemesLine += "*"
 		glossLine += " "
 	}
 
 	for i := 0; i < len(words); i++ {
+		kana := words[i].Kana
 		rom := words[i].Word.Romanization()
 		morphemes := ""
 		glosses := ""
@@ -56,6 +51,7 @@ func glossedSentence(s string, translation string) string {
 
 		maxLen := max(len(rom), len(morphemes))
 
+		kanaLine += kana
 		wordsLine += fmt.Sprintf("%-*s", maxLen+1, rom)
 		morphemesLine += fmt.Sprintf("%-*s", maxLen+1, morphemes)
 		glossLine += fmt.Sprintf("%-*s", maxLen+1, glosses)
@@ -65,7 +61,7 @@ func glossedSentence(s string, translation string) string {
 	morphemesLine = strings.TrimSpace(morphemesLine)
 	glossLine = strings.TrimSpace(glossLine)
 
-	return fmt.Sprintf("```\n%s\n%s\n%s\n%q\n```", wordsLine, morphemesLine, glossLine, translation)
+	return fmt.Sprintf("```\n%s\n%s\n%s\n%s\n%q\n```", kanaLine, wordsLine, morphemesLine, glossLine, translation)
 }
 
 func applyToChildren(n ast.Node, f func(child ast.Node)) {
@@ -162,11 +158,17 @@ func RenderAsMarkdown(n ast.Node, source []byte) []byte {
 			out = append(out, RenderAsMarkdown(child, source)...)
 		})
 	case *ast.CodeSpan:
-		outline := RenderAsMarkdown(n.FirstChild(), source)
-		result := gl(string(outline))
+		outline := string(RenderAsMarkdown(n.FirstChild(), source))
 
+		words, err := gloss.ParseGloss(outline)
+		if err != nil {
+			panic(err)
+		}
+
+		out = append(out, []byte(gloss.Kana(words))...)
+		out = append(out, ' ')
 		out = append(out, '*')
-		out = append(out, []byte(result)...)
+		out = append(out, []byte(gloss.Text(words))...)
 		out = append(out, '*')
 	case *ast.FencedCodeBlock:
 		lines := p.Lines()

@@ -52,7 +52,7 @@ const (
 	stateTwoVowels parseState = 4
 )
 
-func wordFromRomanization(rom string) (lang.ProtoWord, error) {
+func wordFromRomanization(rom string) (lang.ProtoForm, error) {
 	syllables := []lang.ProtoSyllable{}
 	var atr *bool
 
@@ -69,7 +69,7 @@ func wordFromRomanization(rom string) (lang.ProtoWord, error) {
 				b := lang.IsAtr(vowel)
 				atr = &b
 			} else if *atr != lang.IsAtr(vowel) {
-				return lang.ProtoWord{}, fmt.Errorf("mismatching atr: %q", rom)
+				return lang.ProtoForm{}, fmt.Errorf("mismatching atr: %q", rom)
 			}
 
 			switch state {
@@ -90,7 +90,7 @@ func wordFromRomanization(rom string) (lang.ProtoWord, error) {
 				state = stateTwoVowels
 
 			case stateTwoVowels:
-				return lang.ProtoWord{}, fmt.Errorf("three vowels in a row: %q", rom)
+				return lang.ProtoForm{}, fmt.Errorf("three vowels in a row: %q", rom)
 			}
 		} else if cons, ok := consonants[letter]; ok {
 			switch state {
@@ -100,10 +100,10 @@ func wordFromRomanization(rom string) (lang.ProtoWord, error) {
 			case stateOneVowel, stateTwoVowels:
 				state = stateAmbiguousConsonant
 			case statePostOnset:
-				return lang.ProtoWord{}, fmt.Errorf("too many consonants in a row: %q", rom)
+				return lang.ProtoForm{}, fmt.Errorf("too many consonants in a row: %q", rom)
 			case stateAmbiguousConsonant:
 				if !lang.IsValidCoda(mostRecentConsonant) {
-					return lang.ProtoWord{}, fmt.Errorf("invalid coda consonant: %q of %q", letter, rom)
+					return lang.ProtoForm{}, fmt.Errorf("invalid coda consonant: %q of %q", letter, rom)
 				}
 				currentSyllable.Coda = mostRecentConsonant.MOA
 				syllables = append(syllables, currentSyllable)
@@ -115,7 +115,7 @@ func wordFromRomanization(rom string) (lang.ProtoWord, error) {
 
 			mostRecentConsonant = cons
 		} else {
-			return lang.ProtoWord{}, fmt.Errorf("unknown letter %q of %q", letter, rom)
+			return lang.ProtoForm{}, fmt.Errorf("unknown letter %q of %q", letter, rom)
 		}
 
 		i++
@@ -123,22 +123,22 @@ func wordFromRomanization(rom string) (lang.ProtoWord, error) {
 
 	switch state {
 	case stateBegin:
-		return lang.ProtoWord{}, fmt.Errorf("empty word")
+		return lang.ProtoForm{}, fmt.Errorf("empty word")
 	case stateAmbiguousConsonant:
 		if !lang.IsValidCoda(mostRecentConsonant) {
-			return lang.ProtoWord{}, fmt.Errorf("invalid final consonant: %q", rom)
+			return lang.ProtoForm{}, fmt.Errorf("invalid final consonant: %q", rom)
 		}
 		currentSyllable.Coda = mostRecentConsonant.MOA
 	case statePostOnset:
-		return lang.ProtoWord{}, fmt.Errorf("word ends with two consonants: %q", rom)
+		return lang.ProtoForm{}, fmt.Errorf("word ends with two consonants: %q", rom)
 	}
 
 	syllables = append(syllables, currentSyllable)
 
-	return lang.NewProtoWord(*atr, syllables)
+	return lang.NewProtoStem(*atr, syllables)
 }
 
-var Dictionary = map[string]lang.ProtoWord{}
+var Dictionary = map[string]lang.ProtoForm{}
 
 func init() {
 	for name, rom := range _dictionary {

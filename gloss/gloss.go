@@ -24,23 +24,12 @@ type GlossedMorpheme struct {
 
 type GlossedWord struct {
 	Word   lang.NewWord
+	Kana   string
 	Pieces []GlossedMorpheme
 }
 
 func ParseGloss(gloss string) ([]GlossedWord, error) {
 	words := []GlossedWord{}
-
-	dummyWord, err := lang.NewProtoWord(
-		false,
-		[]lang.ProtoSyllable{
-			{
-				Nucleus: lang.Central,
-			},
-		},
-	)
-	if err != nil {
-		return words, err
-	}
 
 	wordStrings := strings.Split(gloss, " ")
 
@@ -49,12 +38,13 @@ func ParseGloss(gloss string) ([]GlossedWord, error) {
 
 		morphemeStrings := strings.Split(wordString, "-")
 
-		word, ok := dictionary.Dictionary[morphemeStrings[0]]
+		stem, ok := dictionary.Dictionary[morphemeStrings[0]]
 		if !ok {
 			return nil, fmt.Errorf("failed to find root %q", morphemeStrings[0])
 		}
+		word := lang.NewProtoWord(stem)
 		gw.Pieces = append(gw.Pieces, GlossedMorpheme{
-			Form:  lang.Evolve(word).Romanization(),
+			Form:  lang.Evolve(word.Form()).Romanization(),
 			Gloss: morphemeStrings[0],
 		})
 
@@ -64,23 +54,11 @@ func ParseGloss(gloss string) ([]GlossedWord, error) {
 				return nil, err
 			}
 
-			word = lang.ApplySuffix(word, suffix)
+			word.AddSuffix(suffix)
 
-			suffixWord := lang.Evolve(lang.ApplySuffix(dummyWord, suffix))
-			suffixForm := suffixWord.Romanization()[1:]
-			suffixForm = strings.ReplaceAll(suffixForm, "a", "A")
-			suffixForm = strings.ReplaceAll(suffixForm, "e", "I")
-			suffixForm = strings.ReplaceAll(suffixForm, "o", "U")
-			suffixForm = strings.ReplaceAll(suffixForm, "i", "I")
-			suffixForm = strings.ReplaceAll(suffixForm, "u", "U")
-			if suffixForm == "" {
-				suffixForm = "∅"
-			}
+			suffixForm := suffix.Romanization()
 			if morphemeStrings[i] == "SP" {
 				suffixForm = "X"
-			}
-			if suffix.Lenite() {
-				suffixForm = "'" + suffixForm
 			}
 			gw.Pieces = append(gw.Pieces, GlossedMorpheme{
 				Form:  "-" + suffixForm,
@@ -88,11 +66,20 @@ func ParseGloss(gloss string) ([]GlossedWord, error) {
 			})
 		}
 
-		gw.Word = lang.Evolve(word)
+		gw.Word = lang.Evolve(word.Form())
+		gw.Kana = word.Kana()
 		words = append(words, gw)
 	}
 
 	return words, nil
+}
+
+func Kana(words []GlossedWord) string {
+	out := ""
+	for _, w := range words {
+		out += w.Kana
+	}
+	return out
 }
 
 func Text(words []GlossedWord) string {

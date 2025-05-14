@@ -13,13 +13,13 @@ type NewWord struct {
 	syllables []NewSyllable
 }
 
-func Evolve(protoword ProtoWord) NewWord {
+func Evolve(protoform ProtoForm) NewWord {
 	newword := NewWord{}
 
-	for i, syllable := range protoword.syllables {
+	for i, syllable := range protoform.syllables {
 		newsyllable := NewSyllable{
 			Onset:   syllable.Onset,
-			Nucleus: surfaceProtoVowel(syllable.Nucleus, protoword.atr),
+			Nucleus: surfaceProtoVowel(syllable.Nucleus, protoform.atr),
 		}
 
 		var prevSyll *NewSyllable = &NewSyllable{}
@@ -55,13 +55,13 @@ func Evolve(protoword ProtoWord) NewWord {
 		}
 
 		if syllable.Offglide != 0 {
-			newsyllable.Offglide = surfaceProtoVowel(syllable.Offglide, protoword.atr)
+			newsyllable.Offglide = surfaceProtoVowel(syllable.Offglide, protoform.atr)
 		}
 		if syllable.Coda != 0 {
 			newsyllable.Coda = surfaceProtoCoda(syllable.Coda)
 		}
 
-		if protoword.atr {
+		if protoform.atr {
 			if syllable.Offglide != 0 {
 				if syllable.Nucleus == Central {
 					newsyllable.Nucleus.Frontness = syllable.Offglide

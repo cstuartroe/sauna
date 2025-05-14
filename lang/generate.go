@@ -30,8 +30,8 @@ func UniformDropoff[T comparable](l []T, dropoff float64) map[T]float64 {
 
 const defaultDropoff = .8
 
-var protoInitialConsonantWeights = UniformDropoff([]Consonant{{}, K, T, N, V, S /*L,*/, Y, M, P}, defaultDropoff)
-var protoMedialConsonantWeights = UniformDropoff([]Consonant{K, T, N, V, S, R /*L,*/, Y, M, P}, defaultDropoff)
+var protoInitialConsonantWeights = UniformDropoff([]Consonant{{}, K, T, N, V, S, Y, M, P}, defaultDropoff)
+var protoMedialConsonantWeights = UniformDropoff([]Consonant{K, T, N, V, S, R, Y, M, P}, defaultDropoff)
 var protoNucleusWeights = UniformDropoff([]VowelFrontness{Central, Front, Back}, .6)
 var protoOffglideWeights = map[VowelFrontness]float64{0: 20, Front: 1, Central: .75, Back: 1}
 var protoCodaWeights = map[MannerOfArticulation]float64{0: 15, Nasal: 2, Stop: 1, Fricative: .75}
@@ -48,7 +48,7 @@ func validProtoInitialConsonant(syllable ProtoSyllable) bool {
 	return true
 }
 
-func RandomProtoWord() (ProtoWord, error) {
+func RandomProtoStem() (ProtoForm, error) {
 	syllables := []ProtoSyllable{}
 	numSyllables := WeightedRandomElement(protoSyllableLengthWeights)
 	for i := 0; i < numSyllables; i++ {
@@ -80,7 +80,7 @@ func RandomProtoWord() (ProtoWord, error) {
 		}
 	}
 
-	return NewProtoWord(
+	return NewProtoStem(
 		WeightedRandomElement(atrWeights),
 		syllables,
 	)

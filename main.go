@@ -12,24 +12,25 @@ import (
 	"github.com/cstuartroe/sauna/lang"
 )
 
-func printEvolution(pw lang.ProtoWord) {
-	nw := lang.Evolve(pw)
+func printEvolution(pf lang.ProtoForm) {
+	nw := lang.Evolve(pf)
 
-	fmt.Printf("%s -> %s \n", pw.Romanization(), nw.Romanization())
+	fmt.Printf("%s -> %s \n", pf.Romanization(), nw.Romanization())
 }
 
 func testSuffixes() {
 	for i := 0; i < 20; i++ {
-		pw, err := lang.RandomProtoWord()
+		ps, err := lang.RandomProtoStem()
 		if err != nil {
 			fmt.Println(err.Error())
 			continue
 		}
-		printEvolution(pw)
+		printEvolution(ps)
 
 		for _, suffix := range lang.TestSuffixes {
-			withSuffix := lang.ApplySuffix(pw, suffix)
-			printEvolution(withSuffix)
+			pw := lang.NewProtoWord(ps)
+			pw.AddSuffix(suffix)
+			printEvolution(pw.Form())
 		}
 
 		fmt.Println()
@@ -38,19 +39,20 @@ func testSuffixes() {
 
 func testActualSuffixes() {
 	for i := 0; i < 50; i++ {
-		pw, err := lang.RandomProtoWord()
+		ps, err := lang.RandomProtoStem()
 		if err != nil {
 			fmt.Println(err.Error())
 			continue
 		}
-		printEvolution(pw)
+		printEvolution(ps)
 
 		for _, suffixSet := range lang.SuffixSets {
 			fmt.Println()
 			for name, suffix := range suffixSet {
-				withSuffix := lang.ApplySuffix(pw, suffix)
-				nw := lang.Evolve(withSuffix)
-				fmt.Printf("    %s: %s -> %s\n", name, withSuffix.Romanization(), nw.Romanization())
+				pw := lang.NewProtoWord(ps)
+				pw.AddSuffix(suffix)
+				nw := lang.Evolve(pw.Form())
+				fmt.Printf("    %s: %s -> %s\n", name, pw.Form().Romanization(), nw.Romanization())
 			}
 		}
 
@@ -60,13 +62,13 @@ func testActualSuffixes() {
 
 func generateParagraph() {
 	for i := 0; i < 100; i++ {
-		pw, err := lang.RandomProtoWord()
+		ps, err := lang.RandomProtoStem()
 		if err != nil {
 			fmt.Println(err.Error())
 			continue
 		}
 
-		nw := lang.Evolve(pw)
+		nw := lang.Evolve(ps)
 
 		fmt.Printf("%s ", nw.Romanization())
 	}
@@ -86,11 +88,11 @@ func cliGloss() {
 
 func generateWords() {
 	for i := 0; i < 3; i++ {
-		word, err := lang.RandomProtoWord()
+		ps, err := lang.RandomProtoStem()
 		if err != nil {
 			panic(err)
 		}
-		printEvolution(word)
+		printEvolution(ps)
 	}
 }
 

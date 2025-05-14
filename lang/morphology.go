@@ -1,25 +1,80 @@
 package lang
 
+import "strings"
+
+type ProtoWord struct {
+	stem     ProtoForm
+	suffixes []ProtoSuffix
+}
+
+func NewProtoWord(stem ProtoForm) ProtoWord {
+	return ProtoWord{
+		stem: stem,
+	}
+}
+
+func (pw *ProtoWord) AddSuffix(suffix ProtoSuffix) {
+	pw.suffixes = append(pw.suffixes, suffix)
+}
+
+func (pw ProtoWord) Form() ProtoForm {
+	form := pw.stem
+	for _, suffix := range pw.suffixes {
+		form = applySuffix(form, suffix)
+	}
+	return form
+}
+
 type ProtoSuffix struct {
 	lenite        bool
 	leadingCoda   MannerOfArticulation
 	syllables     []ProtoSyllable
-	syllablesFunc func(ProtoWord) []ProtoSyllable
+	syllablesFunc func(ProtoForm) []ProtoSyllable
 }
 
 func (s ProtoSuffix) Lenite() bool { return s.lenite }
 
+func (s ProtoSuffix) Romanization() string {
+	dummyWord := NewProtoWord(
+		ProtoForm{
+			false,
+			[]ProtoSyllable{
+				{
+					Nucleus: Central,
+				},
+			},
+		},
+	)
+	dummyWord.AddSuffix(s)
+
+	suffixWord := Evolve(dummyWord.Form())
+	rom := suffixWord.Romanization()[1:]
+	rom = strings.ReplaceAll(rom, "a", "A")
+	rom = strings.ReplaceAll(rom, "e", "I")
+	rom = strings.ReplaceAll(rom, "i", "I")
+	rom = strings.ReplaceAll(rom, "o", "U")
+	rom = strings.ReplaceAll(rom, "u", "U")
+	if rom == "" {
+		rom = "∅"
+	}
+	if s.Lenite() {
+		rom = "'" + rom
+	}
+
+	return rom
+}
+
 var epentheticVowel VowelFrontness = Front
 
-func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
+func applySuffix(form ProtoForm, suffix ProtoSuffix) ProtoForm {
 	newSyllables := []ProtoSyllable{}
-	newSyllables = append(newSyllables, word.syllables...)
+	newSyllables = append(newSyllables, form.syllables...)
 	lenitionIndex := -1
 
 	lastSyllable := &newSyllables[len(newSyllables)-1]
 	suffixSyllables := suffix.syllables
 	if suffix.syllablesFunc != nil {
-		suffixSyllables = suffix.syllablesFunc(word)
+		suffixSyllables = suffix.syllablesFunc(form)
 	}
 
 	suffixStartsWithVowel := len(suffixSyllables) > 0 && suffixSyllables[0].Onset == Consonant{}
@@ -30,7 +85,7 @@ func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
 			lenitionIndex = len(newSyllables)
 
 			syll := ProtoSyllable{
-				Onset:   surfaceProtoCoda(word.syllables[len(word.syllables)-1].Coda),
+				Onset:   surfaceProtoCoda(form.syllables[len(form.syllables)-1].Coda),
 				Nucleus: epentheticVowel,
 				Coda:    suffix.leadingCoda,
 			}
@@ -42,7 +97,7 @@ func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
 
 			syllsToAdd := []ProtoSyllable{}
 			syllsToAdd = append(syllsToAdd, suffixSyllables...)
-			syllsToAdd[0].Onset = surfaceProtoCoda(word.syllables[len(word.syllables)-1].Coda)
+			syllsToAdd[0].Onset = surfaceProtoCoda(form.syllables[len(form.syllables)-1].Coda)
 			newSyllables = append(newSyllables, syllsToAdd...)
 		} else {
 			newSyllables = append(newSyllables, suffixSyllables...)
@@ -83,8 +138,8 @@ func ApplySuffix(word ProtoWord, suffix ProtoSuffix) ProtoWord {
 		}
 	}
 
-	return ProtoWord{
-		atr:       word.atr,
+	return ProtoForm{
+		atr:       form.atr,
 		syllables: newSyllables,
 	}
 }
@@ -334,7 +389,7 @@ var SubjectSuffixes = map[string]ProtoSuffix{
 	},
 	"S2/3S": {},
 	"SP": {
-		syllablesFunc: func(pw ProtoWord) []ProtoSyllable {
+		syllablesFunc: func(pw ProtoForm) []ProtoSyllable {
 			lastSyllable := pw.syllables[len(pw.syllables)-1]
 			var suffixSyllables = []ProtoSyllable{}
 			if lastSyllable.Offglide == 0 && lastSyllable.Coda == 0 {
