@@ -21,7 +21,7 @@ Sauna is a constructed language inspired by Finnish and Old Japanese.
 
 Sauna has the common five-vowel system /a e i o u/.
 
-It has three long vowels /aa ii uu/ and ten diphthongs /ai au ei eu oi ou ie uo ea oa iu ui/.
+It has three long vowels /aa ii uu/ and twelve diphthongs /ai au ei eu oi ou ie uo ea oa iu ui/.
 
 ## Phonotactics
 
