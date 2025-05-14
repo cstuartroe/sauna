@@ -201,7 +201,7 @@ woman-TOP home -ALL  go  -PST-S2/3S
 
 ```
 eyokateva     ereku       narairo
-eyokat-i -vA  ereku-∅     narai-rU -∅
+eyokat-I -vA  ereku-∅     narai-rU -∅
 magpie-PL-TOP tail -NOM   long -NPT-S2/3S
 "Magpies have long tails."
 ```
@@ -210,7 +210,7 @@ The topic is often implied to be contrastive, especiialy when the its semantic r
 
 ```
 veirumme   iuvei          iyeruu
-veirun-vA  iuve -i -∅     iye  -rU -X
+veirun-vA  iuve -I -∅     iye  -rU -X
 south -TOP birch-PL-NOM   small-NPT-SP
 "In the south, the birch trees are small."
 ```
@@ -228,14 +228,14 @@ For some constructions, a particular argument must be the topic.
 
 ```
 eyokateva     ereku       naro
-eyokat-i -vA  ereku-∅     na-rU -∅
+eyokat-I -vA  ereku-∅     na-rU -∅
 magpie-PL-TOP tail -NOM   be-NPT-S2/3S
 "Magpies have tails."
 ```
 
 ```
 aremma        eyokate         tairou
-aren     -vA  eyokat-i -∅     tai -rU -X
+aren     -vA  eyokat-I -∅     tai -rU -X
 1S.polite-TOP magpie-PL-NOM   good-NPT-SP
 "I like magpies."
 ```
@@ -342,7 +342,7 @@ magpie-NOM   acorn-NOM   eat-PST-S2/3S
 
 ```
 eyokat       orai           etas
-eyokat-∅     ora  -i -∅     eta-s  -∅
+eyokat-∅     ora  -I -∅     eta-s  -∅
 magpie-NOM   acorn-PL-NOM   eat-PST-S2/3S
 "The magpie ate the acorns."
 ```
@@ -1100,7 +1100,7 @@ However, subject person marking is still included:
 
 ```
 iyea     tiurui
-iye  -X  tiuru-i
+iye  -X  tiuru-I
 small-SP home -PL
 "small houses"
 ```

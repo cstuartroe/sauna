@@ -71,6 +71,8 @@ func ParseGloss(gloss string) ([]GlossedWord, error) {
 			suffixForm = strings.ReplaceAll(suffixForm, "a", "A")
 			suffixForm = strings.ReplaceAll(suffixForm, "e", "I")
 			suffixForm = strings.ReplaceAll(suffixForm, "o", "U")
+			suffixForm = strings.ReplaceAll(suffixForm, "i", "I")
+			suffixForm = strings.ReplaceAll(suffixForm, "u", "U")
 			if suffixForm == "" {
 				suffixForm = "∅"
 			}
